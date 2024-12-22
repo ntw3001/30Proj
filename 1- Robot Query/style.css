@@ -59,7 +59,7 @@ label {
 
 .element:hover {
   cursor: pointer;
-  box-shadow: 0 0 10px 5px var(--dark-c);
+  box-shadow: 0 0 10px 5px var(--light-c);
 }
 
 .text-background {
@@ -77,4 +77,8 @@ label {
   align-items: center;
   border-radius: 5px;
   box-shadow: 10 10 0px 5px rgba(0,0,0,.1);
+}
+
+.chosen {
+  box-shadow: 0 0 5px 2px var(--light-c);
 }
