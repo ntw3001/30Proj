@@ -34,14 +34,20 @@ h1 {
 .search-container {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
+  border: none;
 }
 
 input {
   width: 0px;
-  border: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 12px;
   outline: none;
   margin: 10px;
+  transition: width 0.5s ease, padding 0.5s ease, box-shadow 0.5s ease, border-color 0.3s ease-in-out 0.5s;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 input::placeholder {
@@ -54,7 +60,6 @@ input::placeholder {
 .fas {
   font-size: 1.5rem;
   color: rgb(83, 83, 83);
-  margin-top: 18px;
 }
 
 .fas:hover {
