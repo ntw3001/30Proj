@@ -10,6 +10,7 @@ body {
 }
 
 .clock-container {
+  width: 80%;
   position: absolute;
   top: 45%;
   left: 50%;
@@ -20,7 +21,7 @@ body {
 }
 
 .clock {
-  font-size: 150px;
+  font-size: 140px;
 }
 
 .user {
@@ -41,4 +42,8 @@ body {
   text-align: center;
   border-bottom: 2px solid #ddd;
   font-size: 3rem;
+}
+
+small {
+  font-size: 4rem;
 }
