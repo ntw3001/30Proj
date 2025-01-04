@@ -2,7 +2,7 @@ window.addEventListener("DOMContentLoaded", showTime());
 
 function showTime() {
   let date = new Date();
-  // date.setTime(50000);
+  date.setTime(500000);
 
   let h = date.getHours();
   let m = date.getMinutes();
@@ -34,7 +34,7 @@ function showTime() {
   }
 
   if (h >= 10 && session === "AM" || h <= 4 && session === "PM") {
-    bg = "https://res.cloudinary.com/ddvmpxtv1/image/upload/v1736003527/Clock/afternoon_m6ntxi.jpg";
+    bg = "https://res.cloudinary.com/ddvmpxtv1/image/upload/v1736004787/Clock/afternoon_2_wozjdn.jpg";
     user.innerHTML=`Are you awake, ${userName}? Good.`;
   }
 
@@ -52,4 +52,13 @@ function showTime() {
 
   body.style.background = `url(${bg}) no-repeat center center`;
   body.style.backgroundSize = "cover";
- }
+
+  document
+    .querySelector(".focus-container input")
+    addEventListener("keypress", function (e) {
+      if (e.key === "Enter") {
+      const focus = document.querySelector(".focus-container input");
+      this.document.querySelector(".focus-container").innerHTML = `<h6>Today we will:</h6><p>${focus.value}</p>`;
+      }
+    })
+}
