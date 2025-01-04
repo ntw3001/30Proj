@@ -2,7 +2,9 @@ window.addEventListener("DOMContentLoaded", showTime());
 
 function showTime() {
   let date = new Date();
-  date.setTime(500000);
+
+  // For testing purposes
+  // date.setTime(500000);
 
   let h = date.getHours();
   let m = date.getMinutes();
