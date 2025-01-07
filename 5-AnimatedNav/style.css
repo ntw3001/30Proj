@@ -33,9 +33,18 @@ body {
   color: #fff;
 }
 
-.nav-container .logo {
-  /* transition-delay: */
+.nav-container {
+  position: relative;
+  z-index: 4;
+  top: 0;
+  left: o;
+  align-items: baseline;
+  display: flex;
+  justify-content: space-between;
+}
 
+.nav-container .logo {
+  transition-delay: 0.45s;
 }
 
 .menu-toggle {
@@ -115,6 +124,7 @@ body {
   text-align: center;
 }
 
+.main-nav-list.active::before,
 .main-nav-list.active::after {
   width: 25vw;
 }
