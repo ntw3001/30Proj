@@ -43,10 +43,6 @@ body {
   justify-content: space-between;
 }
 
-.nav-container .logo {
-  transition-delay: 0.45s;
-}
-
 .menu-toggle {
   cursor: pointer;
   width: 55px;
@@ -101,6 +97,7 @@ body {
   right: 0;
 }
 
+
 .main-nav-list ul {
   position: absolute;
   top: -30%;
@@ -122,6 +119,7 @@ body {
   letter-spacing: 2px;
   margin-top: 1.3rem;
   text-align: center;
+  opacity: 0;
 }
 
 .main-nav-list.active::before,
@@ -135,11 +133,16 @@ body {
   transition: .3s cubic-bezier(0.1, 0.2, 0.3, 1.4) 0.5s;
 }
 
-.main-nav-list a {
+.main-nav-list.active a {
   opacity: 1;
   color: #ddd;
 }
 
 .main-nav-list a:hover {
   text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  margin-bottom: 2rem;
 }
