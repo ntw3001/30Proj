@@ -4,19 +4,21 @@ const content = document.querySelectorAll(".content");
 
 console.log(mainContent, tabs, content);
 
-mainContent.addEventListener("click", function (e) {
+mainContent.onclick = (e) => {
+  console.log(e.target.dataset);
   const id = e.target.dataset.id;
   if (id) {
     tabs.forEach(function (tab) {
       tab.classList.remove("active");
-      e.target.classList.add("active");
     });
-    content.forEach(function (content) {
-      if (content.id === id)
-      content.classList.add("active");
-      else {
-        content.classList.remove("active");
+
+    e.target.classList.add("active");
+
+    content.forEach((content) => {
+      content.classList.remove("active");
+      if (content.id === id) {
+        content.classList.add("active");
       }
     });
   }
-});
+};
