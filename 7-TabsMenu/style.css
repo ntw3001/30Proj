@@ -8,6 +8,14 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
 h1 {
   text-align: cetner;
   margin-bottom: 2rem;
@@ -17,6 +25,7 @@ img {
   border-radius: 5px;
   height: 400px;
   margin-bottom: 2rem;
+  max-width: 800px;
 }
 
 .tabs-container {
