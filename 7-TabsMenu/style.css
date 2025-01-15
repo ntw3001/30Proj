@@ -16,8 +16,13 @@ body {
   flex-direction: column;
 }
 
+main {
+  width: 750px;
+  overflow: hidden;
+}
+
 h1 {
-  text-align: cetner;
+  text-align: center;
   margin-bottom: 2rem;
 }
 
@@ -30,8 +35,11 @@ img {
 
 .tabs-container {
   max-width: 750px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 
 .content {
@@ -39,10 +47,18 @@ img {
 }
 
 .btn.active {
-  background-color: #f1f1f1;
+  background-color: #9ed3c7;
   color: #222;
-  box-shadow: none;
-  border: 1px solid #666;
+}
+
+.btn:focus {
+  background-color: #9ed3c7 !important;
+  color: #222;
+}
+
+.btn:hover {
+  background-color: #b5f1e3 !important;
+  color: rgb(126, 126, 126);
 }
 
 .content.active {
