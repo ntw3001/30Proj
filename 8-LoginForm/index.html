@@ -3,14 +3,35 @@
     <meta charset = "UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b579dd969a.js" crossorigin="anonymous"></script>
     <link rel = "stylesheet" href = "style.css">
     <title>Log In! Please!</title>
   </head>
 
   <body>
-    helo
-    <ul class="players">
-      
-    </ul>
+    <div class="login-container">
+      <h2>Login</h2>
+      <form action="#" id="loginForm">
+        <div class="form-field">
+          <label for="loginUsername">User Name</label>
+          <input type="text" id="loginUsername" placeholder="enter user name" required>
+          <small class="alert-message">no</small>
+        </div>
+        <div class="form-field">
+          <label for="loginPassword">Password</label>
+          <input type="password" id="loginPassword" placeholder="enter password" required>
+          <small class="alert-message">no</small>
+        </div>
+        <div class="form-field">
+          <i class="far fa-eye" id="togglePassword"></i>
+          <label>Show/hide password</label>
+        </div>
+      </form>
+    </div>
+
     <script src="main.js"></script>
   </body>
