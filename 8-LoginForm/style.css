@@ -6,4 +6,43 @@
 
 body {
   font-family: 'Lato', sans-serif;
+  height: 100vh;
+  width: 100%;
+  background: url(https://picsum.photos/1080/1240) no-repeat center/cover;
+  text-shadow: 2px 1px 1px black;
+}
+
+.login-container {
+  position: relative;
+  top: 20%;
+  margin: auto;
+  max-width: 700px;
+  height: 450px;
+  background-color: rgba(20, 20, 20, 0.8);
+  color: #ddd;
+  padding: 2rem;
+  border-radius: 25px;
+  box-shadow: 0 0 10px 5px rgba(o, o, o, o.5);
+}
+
+.btn {
+  width: 120px;
+  margin: 1.5rem 0;
+  border-radius: 10px;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+i.far.fa-eye {
+  cursor: pointer;
+}
+
+.for-field input {
+  color: #ddd;
+}
+
+.alert-message {
+  visibility: hidden;
 }
