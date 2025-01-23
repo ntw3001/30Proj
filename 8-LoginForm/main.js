@@ -19,17 +19,35 @@ loginForm.addEventListener('submit', function(e) {
   const username = loginUsername.value;
   const password = loginPassword.value;
   if (username === "" || username.length < 3) {
-    showError('That username is a losername');
+    showError(loginUsername, 'That username is a losername');
   } else {
-    showSuccess('You logged in, can\'t believe it');
+    showSuccess(loginUsername, 'It\'s an older code, sir, but it checks out');
   }
   if (password === "" || password.length < 6) {
-    showError('That password is an assword');
+    showError(loginPassword, 'That password is an assword');
   } else {
-    showSuccess('You logged in, can\'t believe it');
+    showSuccess(loginPassword, 'You\'re cleared for entry');
   }
 });
 
 function showError(input, message) {
   const formField = input.parentElement;
+  formField.className = 'form-field error';
+  if((formField.className === "form-field error")){
+    const alert_message = formField.querySelector('.alert-message');
+    alert_message.style.visibility = 'visible';
+    alert_message.color = 'red';
+    alert_message.innerHTML = message;
+  }
+}
+
+function showSuccess(input, message) {
+  const formField = input.parentElement;
+  formField.className = 'form-field success';
+  if((formField.className === "form-field success")){
+    const alert_message = formField.querySelector('.alert-message');
+    alert_message.style.visibility = 'visible';
+    alert_message.color = 'green';
+    alert_message.innerHTML = message;
+  }
 }
