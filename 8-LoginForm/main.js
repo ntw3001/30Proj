@@ -51,3 +51,20 @@ function showSuccess(input, message) {
     alert_message.innerHTML = message;
   }
 }
+
+const requestForm = document.querySelector('.form-request');
+
+requestForm.style.display = 'none';
+
+const showRequestForm = document.querySelector('.reset-password');
+
+showRequestForm.addEventListener('click', function(e) {
+  e.preventDefault();
+  if(requestForm.style.display !== 'block'){
+    loginContainer.style.minHeight = '600px';
+    requestForm.style.display = 'block';
+  } else {
+    requestForm.style.display = 'none';
+    loginContainer.style.minHeight = 'initial';
+  }
+});
