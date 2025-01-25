@@ -3,6 +3,8 @@ const loginForm = document.getElementById('loginForm');
 const loginUsername = document.getElementById('loginUsername');
 const loginPassword = document.getElementById('loginPassword');
 const showPasswordIcon = document.querySelector('i.fa-eye');
+const requestForm = document.querySelector('.form-request');
+const showRequestForm = document.querySelector('.reset-password');
 
 showPasswordIcon.addEventListener('click', function() {
   if (loginPassword.type === 'password') {
@@ -16,8 +18,8 @@ showPasswordIcon.addEventListener('click', function() {
 
 loginForm.addEventListener('submit', function(e) {
   e.preventDefault();
-  const username = loginUsername.value;
-  const password = loginPassword.value;
+  const username = loginUsername.value.trim();
+  const password = loginPassword.value.trim();
   if (username === "" || username.length < 3) {
     showError(loginUsername, 'That username is a losername');
   } else {
@@ -52,11 +54,7 @@ function showSuccess(input, message) {
   }
 }
 
-const requestForm = document.querySelector('.form-request');
-
 requestForm.style.display = 'none';
-
-const showRequestForm = document.querySelector('.reset-password');
 
 showRequestForm.addEventListener('click', function(e) {
   e.preventDefault();
@@ -72,13 +70,17 @@ showRequestForm.addEventListener('click', function(e) {
 requestForm.addEventListener('submit', request);
 
 function request (e) {
-  e.preventDefault;
-  if (requestEmail === "" || requestEmail.length < 6) {
-    const requestEmail = document.getElementById('requestEmail');
-    if (requestEmail.value === "" || requestEmail.value.length < 6) {
-      showError(requestEmail, 'That email is an efail');
-    } else {
-      showSuccess(requestEmail, 'We will rush it to you');
-    }
+  e.preventDefault();
+  const requestEmail = document.getElementById('requestEmail');
+  const emailValue = requestEmail.value.trim();
+  if (isValidEmail(emailValue)) {
+    showSuccess(requestEmail, 'We will rush it to you');
+  } else {
+    showError(requestEmail, 'That email is an efail');
   }
+}
+
+function isValidEmail(email) {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
 }
