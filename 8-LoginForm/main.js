@@ -68,3 +68,17 @@ showRequestForm.addEventListener('click', function(e) {
     loginContainer.style.minHeight = 'initial';
   }
 });
+
+requestForm.addEventListener('submit', request);
+
+function request (e) {
+  e.preventDefault;
+  if (requestEmail === "" || requestEmail.length < 6) {
+    const requestEmail = document.getElementById('requestEmail');
+    if (requestEmail.value === "" || requestEmail.value.length < 6) {
+      showError(requestEmail, 'That email is an efail');
+    } else {
+      showSuccess(requestEmail, 'We will rush it to you');
+    }
+  }
+}
