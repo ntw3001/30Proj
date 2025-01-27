@@ -7,7 +7,7 @@
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: top;
+  justify-content: flex-start;
   align-items: center;
   margin-top: 50px;
   height: 100vh;
