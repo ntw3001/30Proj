@@ -3,9 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel ="stylesheet" href = "style.css">
   <title>Cowculate your tip</title>
 </head>
 <body>
- moo
+ <div id="container" class="card">
+  <h1 class="text-prim">Tip Cowculator</h1>
+  <div id="Calculator">
+    <form>
+      <div class="form-group">
+        <label for="Bill">How many cows did it cost?</label>
+        <input type="number" id="Bill" placeholder="Enter the number of cattle"/>
+      </div>
+      <div class="form-group">
+        <label>How many farmers are pooling their herds</label>
+        <input type="number" id="Peopleamount" placeholder="Tell me or I can't do it"/>
+      </div>
+      <h4 class="text-prim">How was the quality of the purchase in question?</h4>
+      <div class="input-fields">
+        <select id="Quality">
+          <option value="0" disabled selected>Pick one</option>
+          <option value="0">Grave</option>
+          <option value="0.1">Disgraceful</option>
+          <option value="0.15">Shambolic</option>
+          <option value="0.2">Disappointing</option>
+          <option value="0.3">Utopian</option>
+        </select>
+      </div>
+    </form>
+  </div>
+ </div>
 </body>
 </html>
