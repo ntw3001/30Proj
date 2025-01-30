@@ -13,36 +13,26 @@ calculator.addEventListener('submit', calculateTip);
 
 function calculateTip(e) {
   e.preventDefault();
-  let billValue = bill.value;
-  let numberOfPeopleValue = numberOfPeople.value;
-  let servicequalValue = servicequal.value;
+  let billValue = parseFloat(bill.value);
+  let numberOfPeopleValue = parseFloat(numberOfPeople.value);
+  let servicequalValue = parseFloat(servicequal.value);
 
   if (billValue === '' || servicequalValue == 0) {
       alert('Please enter values');
       return;
   }
 
-  let totalTip = (billValue * servicequalValue);
-  let billWithTip = billValue * (1 + servicequalValue);
-  let dividedTip = totalTip / numberOfPeopleValue;
-  let dividedBillWithTip = billWithTip / numberOfPeopleValue;
+  let totalTip = parseFloat((billValue * servicequalValue).toFixed(2));
+  let billWithTip = parseFloat((billValue * (1 + servicequalValue)).toFixed(2));
+  let dividedTip = parseFloat((totalTip / numberOfPeopleValue).toFixed(2));
+  let dividedBillWithTip = parseFloat((billWithTip / numberOfPeopleValue).toFixed(2));
 
   document.getElementById('Div_Tip').style.display = numberOfPeopleValue > 1 ? 'block' : 'none';
   document.getElementById('Div_Tip_Person').style.display = numberOfPeopleValue > 1 ? 'block' : 'none';
 
-  dividedTip = Math.round(dividedTip * 100) / 100;
-  dividedTip = dividedTip.toFixed(2);
-
-  dividedBillWithTip = Math.round(dividedBillWithTip * 100) / 100;
-  dividedBillWithTip = dividedBillWithTip.toFixed(2);
-
   result.style.display = 'block';
-  console.log(totalTip);
-  console.log(billWithTip);
-  console.log(dividedTip);
-  console.log(dividedBillWithTip);
   document.getElementById('Tip').innerHTML = totalTip.toFixed(2);
-  document.getElementById('Total_Tip').innerHTML = billWithTip.toFixed(2)
-  document.getElementById('Div_Tip').innerHTML = dividedTip;
-  document.getElementById('Div_Tip_Person').innerHTML = dividedBillWithTip;
+  document.getElementById('Total_Tip').innerHTML = billWithTip.toFixed(2);
+  document.getElementById('Div_Tip').innerHTML = dividedTip.toFixed(2);
+  document.getElementById('Div_Tip_Person').innerHTML = dividedBillWithTip.toFixed(2);
 }
