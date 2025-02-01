@@ -46,10 +46,10 @@ body {
   background: #ddd;
 }
 
-/* .seeking {
+.shell.seeking:hover {
   background: url("./img/EyeOfSeeking.png") center/cover;
   box-shadow: 0 0 5px 2px rbga(0, 0, 0, 0.5);
-} */
+}
 
 .hovered {
   transform: scale(1.1);

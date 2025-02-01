@@ -22,6 +22,9 @@ function dragEnd() {
   document.querySelector("body").style.backgroundColor = "#356";
   title.innerText = "Seek the dragon's lair";
   title.style.color = "#fff";
+  for(const shell of shells) {
+    shell.classList.add('seeking');
+  }
 }
 
 for(const shell of shells) {
