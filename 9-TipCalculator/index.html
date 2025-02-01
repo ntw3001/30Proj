@@ -23,7 +23,7 @@
       <h4 class="text-prim">How was the quality of the purchase in question?</h4>
       <div class="input-fields">
         <select id="Quality">
-          <option value="0" disabled selected>Pick one</option>
+          <option value="" disabled selected>Pick one</option>
           <option value="0">Grave - no bonus cattle</option>
           <option value="0.1">Disgraceful - 10% bonus cattle</option>
           <option value="0.15">Shambolic - 15% bonus cattle</option>
@@ -37,8 +37,8 @@
   <ul id="result" class="text-sec">
     <li>Additional cattle suggested: <span id="Tip"></span></li>
     <li>Total cattle value: <span id="Total_Tip"></span></li>
-    <li>Each farmer's additional cattle: <span id="Div_Tip"></span></li>
-    <li>Each farmer's total share: <span id="Div_Tip_Person"></span></li>
+    <li id="Solo_Hide">Each farmer's additional cattle: <span id="Div_Tip"></span></li>
+    <li id="Solo_Hide2">Each farmer's total share: <span id="Div_Tip_Person"></span></li>
   </ul>
  </div>
  <script src="main.js"></script>

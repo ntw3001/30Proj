@@ -17,7 +17,7 @@ function calculateTip(e) {
   let numberOfPeopleValue = parseFloat(numberOfPeople.value);
   let servicequalValue = parseFloat(servicequal.value);
 
-  if (billValue === '' || servicequalValue == 0) {
+  if (billValue === '' || servicequalValue == null) {
       alert('Please enter values');
       return;
   }
@@ -27,8 +27,8 @@ function calculateTip(e) {
   let dividedTip = parseFloat((totalTip / numberOfPeopleValue).toFixed(2));
   let dividedBillWithTip = parseFloat((billWithTip / numberOfPeopleValue).toFixed(2));
 
-  document.getElementById('Div_Tip').style.display = numberOfPeopleValue > 1 ? 'block' : 'none';
-  document.getElementById('Div_Tip_Person').style.display = numberOfPeopleValue > 1 ? 'block' : 'none';
+  document.getElementById('Solo_Hide').style.display = numberOfPeopleValue > 1 ? 'block' : 'none';
+  document.getElementById('Solo_Hide2').style.display = numberOfPeopleValue > 1 ? 'block' : 'none';
 
   result.style.display = 'block';
   document.getElementById('Tip').innerHTML = totalTip.toFixed(2);
