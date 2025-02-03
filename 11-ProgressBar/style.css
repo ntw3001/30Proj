@@ -11,6 +11,10 @@
   z-index: 2;
 }
 
+#goButton {
+  width: 110px;
+}
+
 #Progress-bar {
   width: 100%;
   background-color: #ddd;
@@ -46,38 +50,24 @@ img {
   animation: clearImg var(--speed) forwards;
 }
 
+.reblur {
+  animation: reblurImg var(--speed) forwards;
+}
+
 @keyframes clearImg {
   0% {
     filter: blur(1.5rem);
   }
-  10% {
-    filter: blur(1.4rem);
-  }
-  20% {
-    filter: blur(1.3rem);
-  }
-  30% {
-    filter: blur(1.1rem);
-  }
-  40% {
-    filter: blur(0.9rem);
-  }
-  50% {
-    filter: blur(0.8rem);
-  }
-  60% {
-    filter: blur(0.6rem);
-  }
-  70% {
-    filter: blur(0.5rem);
-  }
-  80% {
-    filter: blur(0.3rem);
-  }
-  90% {
-    filter: blur(0.2rem);
-  }
   100% {
     filter: blur(0);
+  }
+}
+
+@keyframes reblurImg {
+  0% {
+    filter: blur(0);
+  }
+  100% {
+    filter: blur(1.5rem);
   }
 }
