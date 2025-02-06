@@ -24,3 +24,8 @@ p {
   margin: auto;
   margin-top: 3rem;
 }
+
+.active {
+  box-shadow: inset 3px 3px 5px 0 rgba(0, 0, 0, 0.5);
+  transform: scale(0.9);
+}
