@@ -13,23 +13,27 @@ const capitalizeBtn=document.querySelector('.capitalize');
 const boldBtn=document.querySelector('.bold');
 const italicBtn=document.querySelector('.italic');
 const underlineBtn=document.querySelector('.underline');
+const spongebobBtn=document.querySelector('.spongebob');
 
 uppercaseBtn.addEventListener('click', (e) => {
-  e.target.classList.toggle('active')
+  e.target.classList.add('active')
+  spongebobBtn.classList.remove('active')
   lowercaseBtn.classList.remove('active')
   capitalizeBtn.classList.remove('active')
   return (outputField.innerHTML = outputField.innerHTML.toUpperCase());
 });
 
 lowercaseBtn.addEventListener('click', (e) => {
-  e.target.classList.toggle('active')
+  e.target.classList.add('active')
+  spongebobBtn.classList.remove('active')
   uppercaseBtn.classList.remove('active')
   capitalizeBtn.classList.remove('active')
   return (outputField.innerHTML = outputField.innerHTML.toLowerCase());
 });
 
 capitalizeBtn.addEventListener('click', (e) => {
-  e.target.classList.toggle('active')
+  e.target.classList.add('active')
+  spongebobBtn.classList.remove('active')
   uppercaseBtn.classList.remove('active')
   lowercaseBtn.classList.remove('active')
   return (outputField.innerHTML = outputField.innerHTML.charAt(0).toUpperCase() + outputField.innerHTML.slice(1).toLowerCase());
@@ -48,4 +52,16 @@ italicBtn.addEventListener('click', (e) => {
 underlineBtn.addEventListener('click', (e) => {
   e.target.classList.toggle('active')
   return (outputField.style.textDecoration === 'underline' ? outputField.style.textDecoration = 'none' : outputField.style.textDecoration = 'underline');
+});
+
+function spongeText () {
+  outputField.innerHTML = outputField.innerHTML.split('').map((char, index) => index % 2 === 0 ? char.toLowerCase() : char.toUpperCase()).join('');
+};
+
+spongebobBtn.addEventListener('click', (e) => {
+  e.target.classList.add('active')
+  uppercaseBtn.classList.remove('active')
+  lowercaseBtn.classList.remove('active')
+  capitalizeBtn.classList.remove('active')
+  return spongeText();
 });
