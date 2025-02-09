@@ -13,8 +13,10 @@ let colorArray= ["00", "00", "00"];
 const zeroPosition = Math.floor(Math.random() * 3);
 const onePosition = Math.floor(Math.random() * 3);
 const twoPosition = Math.floor(Math.random() * 3);
-// shuffleArray(colorArray);
 
+let lowVal = Math.floor(Math.random() * 8);
+let valRange = Math.floor(Math.random() * 4) + 4;
+let highVal = lowVal + valRange;
 
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
@@ -39,21 +41,23 @@ elements.forEach(function (element) {
 });
 
 function getRandomColor() {
-  const letter = "0123456789ABCDEF";
+  const hexRange = "0123456789ABCDEF";
+  let letter = hexRange.slice(lowVal, highVal);
+  console.log(letter);
   let color = "#";
   let arrayEntry1 = "";
   for (let i = 0; i<2; i++) {
-    arrayEntry1 += letter[Math.floor(Math.random() * 16)];
+    arrayEntry1 += letter[Math.floor(Math.random() * letter.length)];
   }
   colorArray[zeroPosition] = arrayEntry1;
   let arrayEntry2 = "";
   for (let i = 0; i<2; i++) {
-    arrayEntry2 += letter[Math.floor(Math.random() * 16)];
+    arrayEntry2 += letter[Math.floor(Math.random() * letter.length)];
   }
   colorArray[onePosition] = arrayEntry2;
   let arrayEntry3 = "";
   for (let i = 0; i<2; i++) {
-    arrayEntry3 += letter[Math.floor(Math.random() * 16)];
+    arrayEntry3 += letter[Math.floor(Math.random() * letter.length)];
   }
   colorArray[twoPosition] = arrayEntry3;
   color = color + colorArray.join("");
