@@ -1,7 +1,7 @@
-const checkbox = document.getElementById('checkbox');
+// const checkbox = document.getElementById('checkbox');
 const submitBtn = document.querySelector('button[type=submit]');
 
-checkbox.disabled = true;
+// checkbox.disabled = true;
 submitBtn.disabled = true;
 
 const elements =  document.querySelectorAll('.element');
@@ -18,7 +18,10 @@ elements.forEach(function (element) {
     textBackground.innerHTML = color;
   }
   colorList.push(color);
-  selectColor.innerHTML = colorList[Math.floor(Math.random() * colorList.length)];
+  let randomColor = colorList[Math.floor(Math.random() * colorList.length)];
+  randomColor = randomColor.trim();
+  // selectColor.innerHTML = randomColor;
+  selectColor.style.backgroundColor = `${randomColor}`;
 });
 
 
@@ -38,7 +41,7 @@ elements.forEach(function (element) {
         el.classList.remove('chosen');
       });
     element.classList.toggle('chosen');
-    checkbox.checked = true;
+    // checkbox.checked = true;
     submitBtn.disabled = false;
     submitBtn.classList.remove('btn-light');
     submitBtn.classList.add('btn-success');

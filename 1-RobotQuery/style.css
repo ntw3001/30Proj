@@ -82,3 +82,13 @@ label {
 .chosen {
   box-shadow: 0 0 5px 2px var(--light-c);
 }
+
+#selectColor {
+  display: inline-block;
+  height: 42px;
+  width: 120px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: white;
+  vertical-align: middle;
+}
