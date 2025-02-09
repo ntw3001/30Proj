@@ -11,6 +11,8 @@ let correctColor
 
 let colorArray= ["00", "00", "00"];
 const zeroPosition = Math.floor(Math.random() * 3);
+const onePosition = Math.floor(Math.random() * 3);
+const twoPosition = Math.floor(Math.random() * 3);
 // shuffleArray(colorArray);
 
 
@@ -39,13 +41,21 @@ elements.forEach(function (element) {
 function getRandomColor() {
   const letter = "0123456789ABCDEF";
   let color = "#";
-  let arrayEntry = "";
+  let arrayEntry1 = "";
   for (let i = 0; i<2; i++) {
-    arrayEntry += letter[Math.floor(Math.random() * 16)];
+    arrayEntry1 += letter[Math.floor(Math.random() * 16)];
   }
-  console.log(colorArray);
-  console.log(arrayEntry);
-  colorArray[zeroPosition] = arrayEntry;
+  colorArray[zeroPosition] = arrayEntry1;
+  let arrayEntry2 = "";
+  for (let i = 0; i<2; i++) {
+    arrayEntry2 += letter[Math.floor(Math.random() * 16)];
+  }
+  colorArray[onePosition] = arrayEntry2;
+  let arrayEntry3 = "";
+  for (let i = 0; i<2; i++) {
+    arrayEntry3 += letter[Math.floor(Math.random() * 16)];
+  }
+  colorArray[twoPosition] = arrayEntry3;
   color = color + colorArray.join("");
   return color
 }
