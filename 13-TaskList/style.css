@@ -44,12 +44,16 @@ a, li {
   padding: 10px 20px;
   color: #363636;
   background: #f0f0e8EE;
-  text-transform: caitalize;
+  text-transform: capitalize;
   font-weight: 500;
   border: 2px solid #04a1bf;
   border-radius: 3px;
   transition: all .5s ease;
   letter-spacing: 2px;
+}
+
+li.newitem {
+  animation: newitem .5s ease;
 }
 
 li:hover {
@@ -87,5 +91,54 @@ input {
 }
 
 .delete {
-  transform: scale(0);
+  transform: scaleX(1.25) scaleY(0);
+}
+
+@keyframes limove {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(50px);
+  }
+}
+
+@keyframes limove-reverse {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50px);
+  }
+}
+
+.limove {
+  animation: limove .5s ease;
+}
+
+.limove-reverse {
+  animation: limove-reverse .5s ease;
+}
+
+@keyframes newitem {
+  0% {
+    color: #04a1bf;
+    background: #04a1bf;
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    margin: 5px 0;
+    padding: 10px 20px;
+    color: #363636;
+    background: #f0f0e8EE;
+    text-transform: capitalize;
+    font-weight: 500;
+    border: 2px solid #04a1bf;
+    border-radius: 3px;
+    transition: all .5s ease;
+    letter-spacing: 2px;
+  }
 }
