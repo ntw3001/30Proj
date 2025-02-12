@@ -40,9 +40,10 @@ ul {
 }
 
 a, li {
+  margin: 5px 0;
   padding: 10px 20px;
   color: #363636;
-  background: #f0f0e8;
+  background: #f0f0e8EE;
   text-transform: caitalize;
   font-weight: 500;
   border: 2px solid #04a1bf;
@@ -56,11 +57,35 @@ li:hover {
   color: #fff;
 }
 
-/* li > button */
+li:hover > button {
+  color: #fff;
+}
+
+li > button {
+  font-weight: 900;
+  background: none;
+  border: none;
+  float: right;
+  color: #363636;
+}
+
+li > button:hover {
+  color: #ff2c2cb6;
+}
 
 input {
   max-width: 70%;
   padding: 5px;
   border: none;
   border-radius: 3px;
+}
+
+.done {
+  background: #666666EE;
+  color: rgb(0, 0, 0);
+  text-decoration: line-through;
+}
+
+.delete {
+  transform: scale(0);
 }
