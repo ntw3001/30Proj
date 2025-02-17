@@ -1,0 +1,167 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #ddd;
+  overflow-x: hidden;
+  padding-bottom: 200px;
+}
+
+.intro {
+  color: #dfdfdf;
+  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15vh;
+  width: 100%;
+  background: url(https://img.freepik.com/free-photo/abstract-dark-background-with-different-colors-generative-ai_169016-30603.jpg?t=st=1739801903~exp=1739805503~hmac=9de73e799db087aa3f11e11da5710799187c5b5fe1372f7800392848ed133345&w=996)
+    no-repeat center center/cover;
+  z-index: 3;
+  border-bottom: 1px solid #333;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 3px 3px 2px #000;
+}
+
+.timeline {
+  top: 25vh;
+  position: relative;
+  height: 75vh;
+}
+
+ul {
+  padding: 50px 0;
+}
+
+li {
+  list-style: none;
+  position: relative;
+  width: 6px;
+  margin: 0 auto;
+  padding-top: 6px;
+  background: #333;
+  box-shadow: 0 0 10px 2px #333;
+}
+
+li::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: inherit;
+}
+
+li div {
+  position: relative;
+  bottom: 0;
+  height: 550px;
+  width: 350px;
+  padding: 1rem;
+  box-shadow: 0px 10px 15px 2px #333;
+}
+
+li div::before {
+  content: "";
+  position: absolute;
+  bottom: 7px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+li:nth-child(odd) div {
+  left: 3rem;
+}
+
+li:nth-child(odd) div::before {
+  left: -15px;
+  border-width: 8px 16px 8px 0;
+  border-color: transparent rgb(102, 165, 139) transparent transparent;
+}
+
+li:nth-child(even) div {
+  left: -390px;
+}
+
+li:nth-child(even) div h2 {
+  text-align: right;
+}
+
+li:nth-child(even) div::before {
+  right: -15px;
+  border-width: 8px 0 8px 16px;
+  border-color: transparent transparent transparent rgb(102, 165, 139);
+}
+
+p {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0.5rem
+}
+
+li:nth-child(1) div {
+  background: url("https://picsum.photos/400/800?random=1") center/cover;
+}
+
+li:nth-child(2) div {
+  background: url("https://picsum.photos/400/800?random=2") center/cover;
+}
+
+li:nth-child(3) div {
+  background: url("https://picsum.photos/400/800?random=3") center/cover;
+}
+
+li:nth-child(4) div {
+  background: url("https://picsum.photos/400/800?random=4") center/cover;
+}
+
+li:nth-child(5) div {
+  background: url("https://picsum.photos/400/800?random=5") center/cover;
+}
+
+li:nth-child(6) div {
+  background: url("https://picsum.photos/400/800?random=6") center/cover;
+}
+
+li:nth-child(7) div {
+  background: url("https://picsum.photos/400/800?random=7") center/cover;
+}
+
+li:nth-child(8) div {
+  background: url("https://picsum.photos/400/800?random=8") center/cover;
+}
+
+li:nth-child(9) div {
+  background: url("https://picsum.photos/400/800?random=9") center/cover;
+}
+
+li:nth-child(10) div {
+  background: url("https://picsum.photos/400/800?random=10") center/cover;
+}
+
+li:nth-child(11) div {
+  background: url("https://picsum.photos/400/800?random=11") center/cover;
+}
+
+li:nth-child(12) div {
+  background: url("https://picsum.photos/400/800?random=12") center/cover;
+}
