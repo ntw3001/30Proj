@@ -7,7 +7,7 @@ const quizData = [
         d: 'Being a big scary dog, grrr',
         correct: 'a'
     }, {
-        question: 'How did you get that idea?',
+        question: 'How did you get that idea',
         a: 'I have a small book of ideas I sometimes read',
         b: 'I don\'t, I\'m not creative',
         c: 'I just try thinking creatively',
@@ -33,6 +33,8 @@ const quizData = [
 const quiz = document.getElementById('quiz');
 const answerEl = document.querySelectorAll('.answer');
 const questionEl = document.querySelector('#question');
+const answerButton = document.querySelectorAll('.quiz-list-item');
+console.log(answerButton);
 
 const a_text = document.getElementById('a_text');
 const b_text = document.getElementById('b_text');
@@ -61,6 +63,19 @@ function deselectAnswers() {
     answerEl.forEach(answerEl => answerEl.checked = false);
 }
 
+answerButton.forEach(button => {
+    button.addEventListener('click', () => {
+      const radio = button.querySelector('.answer');
+      if (radio) {
+        radio.checked = !radio.checked;
+        answerButton.forEach(button => {
+          button.classList.remove('answerSelected');
+        });
+        button.classList.toggle('answerSelected');
+      }
+    });
+});
+
 function getSelected() {
     let answer;
 
@@ -69,6 +84,7 @@ function getSelected() {
             answer = answerEl.id;
         }
     });
+    console.log(answer);
 
     return answer;
 }
@@ -84,9 +100,12 @@ submitBtn.addEventListener('click', () => {
 
   if (currentQuiz < quizData.length - 1) {
       currentQuiz++;
+      answerButton.forEach(button => {
+        button.classList.remove('answerSelected');
+      });
       loadQuiz();
   } else {
-      quiz.innerHTML = `<h2>You are creativeto a value of ${score}/${quizData.length}. Nice!</h2>
-      <button class "btn green" onclick="location.reload()">Take the quiz again?</button>`;
+      quiz.innerHTML = `<h4>You are creative to a value of ${score}/${quizData.length}. Nice!</h4>
+      <button class="btn" onclick="location.reload()">Take the quiz again?</button>`;
   }
 });

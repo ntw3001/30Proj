@@ -14,13 +14,13 @@ body {
 
 h1 {
   background-color: rgba(0, 0, 0, 0.3);
-  width: 450px;
+  width: 500px;
   margin: 2rem auto !important;
   padding: 1rem 0.5rem;
 }
 
 header {
-  width: 450px;
+  width: 500px;
   background-color: #fff;
   border-radius: 10px;
   margin: auto;
@@ -50,23 +50,28 @@ li:hover {
   background-color: #26a69a;
   box-shadow: 0 0 5px 2px rgba (0, 0, 0, 0.3);
   transition: background-color 0.2s ease-in;
+  cursor: pointer;
 }
 
 label {
-  font-size: 1.3rem;
+  font-size: 1.3rem !important;
   transition: 0.3s ease-in;
+  pointer-events: none;
 }
 
-label:hover {
-  cursor: pointer;
+li:hover label {
   color: #000;
 }
 
 input:checked ~ label {
-  color: red;
+  color: rgba(51, 228, 175, 0.801);
 }
 
 .btn {
   margin-top: 1rem;
   width: 300px;
+}
+
+.answerSelected {
+  background-color:rgba(0, 58, 45, 0.788)
 }
