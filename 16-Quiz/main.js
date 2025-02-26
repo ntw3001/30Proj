@@ -71,7 +71,9 @@ answerButton.forEach(button => {
         answerButton.forEach(button => {
           button.classList.remove('answerSelected');
         });
-        button.classList.toggle('answerSelected');
+        if (radio.checked) {
+          button.classList.add('answerSelected');
+        }
       }
     });
 });

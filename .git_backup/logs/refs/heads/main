@@ -1,0 +1,86 @@
+0000000000000000000000000000000000000000 4e8e58d5d61e279cb4f70db1d3c1c2d6d86bfb1b Nick Westbrook <ntw3001@gmail.com> 1734447193 +0900	commit (initial): started project 1 and made a little index page to link all the projects together
+4e8e58d5d61e279cb4f70db1d3c1c2d6d86bfb1b 295c0c7e286295fd5babe893eda51fb85e1f8003 Nick Westbrook <ntw3001@gmail.com> 1734447287 +0900	pull origin main --allow-unrelated-histories: Merge made by the 'ort' strategy.
+295c0c7e286295fd5babe893eda51fb85e1f8003 6508ec8866261de45593a50dcb31b9629d4ac179 Nick Westbrook <ntw3001@gmail.com> 1734532009 +0900	commit: did the styling for the little robot box
+6508ec8866261de45593a50dcb31b9629d4ac179 fee2e7493a7af373e7b9a19d3edb03d76e5ba5a4 Nick Westbrook <ntw3001@gmail.com> 1734532270 +0900	commit: little fix to the container margins
+fee2e7493a7af373e7b9a19d3edb03d76e5ba5a4 c039e2de83a73fd6be982c30393c74c513a2d823 Nick Westbrook <ntw3001@gmail.com> 1734550082 +0900	commit: set up the random colour generator, did a bit of styling to make it more readable over bright colours
+c039e2de83a73fd6be982c30393c74c513a2d823 21914b86458adad3c043642350bb32504d4a41d7 Nick Westbrook <ntw3001@gmail.com> 1734876630 +0900	commit: added the functionality to identify correct and incorrect answers
+21914b86458adad3c043642350bb32504d4a41d7 2a7799db26c112b0bbd86c335afc300666190578 Nick Westbrook <ntw3001@gmail.com> 1734876982 +0900	commit: added a bit of class to the button
+2a7799db26c112b0bbd86c335afc300666190578 a61b72e4b667a78aee2b2acee5f63eab93a5d239 Nick Westbrook <ntw3001@gmail.com> 1734879401 +0900	commit: did a little fancying up, and gave the submit button a true purpose
+a61b72e4b667a78aee2b2acee5f63eab93a5d239 d65e595e44e4f9760f8b451ee6793d5c8476231c Nick Westbrook <ntw3001@gmail.com> 1734957124 +0900	commit: started 2nd project
+d65e595e44e4f9760f8b451ee6793d5c8476231c 71f9f25db8cc5905a3f2bdbd810fef605aaf6e8c Nick Westbrook <ntw3001@gmail.com> 1734959590 +0900	commit: a bit of styling, a background image
+71f9f25db8cc5905a3f2bdbd810fef605aaf6e8c fcf721afaa369d0dfa4c5d5a0b80052373698396 Nick Westbrook <ntw3001@gmail.com> 1735138287 +0900	commit: finished styling this stopwatch
+fcf721afaa369d0dfa4c5d5a0b80052373698396 85207dbba6194e721d0cd9236495a9ddb865e986 Nick Westbrook <ntw3001@gmail.com> 1735507276 +0900	commit: finished up the stopwatch, made it pretty, gave it some better UI features
+85207dbba6194e721d0cd9236495a9ddb865e986 aefebfbf2474831811a15a0f17d0914389bdb095 Nick Westbrook <ntw3001@gmail.com> 1735771857 +0900	commit: put files in place for project 3
+aefebfbf2474831811a15a0f17d0914389bdb095 fb6db2eccd67b5e68733245c56ec0739eb8634b9 Nick Westbrook <ntw3001@gmail.com> 1735787528 +0900	commit: did the styling for this little page
+fb6db2eccd67b5e68733245c56ec0739eb8634b9 82a3bc47b0e2b66402594cac1168d6f036128d23 Nick Westbrook <ntw3001@gmail.com> 1735789172 +0900	commit: set up the javascript, did a bit more styling to make the transition out pretty
+82a3bc47b0e2b66402594cac1168d6f036128d23 e100b30146fcb13a0812d0ee5836cae51b73299a Nick Westbrook <ntw3001@gmail.com> 1735831273 +0900	commit: set up html and styling for mission 4
+e100b30146fcb13a0812d0ee5836cae51b73299a cff582d6ed8b3c702f7501376eb7aa24b7e9a55f Nick Westbrook <ntw3001@gmail.com> 1736000358 +0900	commit: set up the clock itself
+cff582d6ed8b3c702f7501376eb7aa24b7e9a55f c8742fdcdac3d0fff3520666226a52dfb52e32bc Nick Westbrook <ntw3001@gmail.com> 1736004127 +0900	commit: added reactive text and background images
+c8742fdcdac3d0fff3520666226a52dfb52e32bc c66044ed7ac9f2d186ec54bc6de1a2e8d47a3ef9 Nick Westbrook <ntw3001@gmail.com> 1736004872 +0900	commit: finished the clock, looking nice
+c66044ed7ac9f2d186ec54bc6de1a2e8d47a3ef9 930345a6565d466c78b3c48a0a437c7ce9747fcf Nick Westbrook <ntw3001@gmail.com> 1736004940 +0900	commit: oopsie I kept the hardcoded testing time uncommented
+930345a6565d466c78b3c48a0a437c7ce9747fcf 23b8423ec1673d1e4cbbda8e740c177907342b8c Nick Westbrook <ntw3001@gmail.com> 1736025439 +0900	commit: made a start on mission 5
+23b8423ec1673d1e4cbbda8e740c177907342b8c a058f396deb1a1da7d573c686eedbf248e4ed748 Nick Westbrook <ntw3001@gmail.com> 1736127572 +0900	commit: did up all that css for this animated navigation trick
+a058f396deb1a1da7d573c686eedbf248e4ed748 e9eabb3cf39cd3ae60049d9d70a324096271622f Nick Westbrook <ntw3001@gmail.com> 1736275039 +0900	commit: got the menu animation looking nice like
+e9eabb3cf39cd3ae60049d9d70a324096271622f 9388c4769e3eface6a56deab318f39c6329bf4f4 Nick Westbrook <ntw3001@gmail.com> 1736277739 +0900	commit: finished animation for menu dropdown, very pleasing
+9388c4769e3eface6a56deab318f39c6329bf4f4 4f33203fa5891e018a69b29402959426bcb0c859 Nick Westbrook <ntw3001@gmail.com> 1736303232 +0900	commit: set up structure for the next project
+4f33203fa5891e018a69b29402959426bcb0c859 7f0027928124f169a22ff413cc0a5101ec91ac48 Nick Westbrook <ntw3001@gmail.com> 1736388784 +0900	commit: added the background image and made it grow and shrink nicely
+7f0027928124f169a22ff413cc0a5101ec91ac48 686aefa5058cb7ddeb94c7def879aadbf153dd09 Nick Westbrook <ntw3001@gmail.com> 1736390066 +0900	commit: finished that, it's just a little one
+686aefa5058cb7ddeb94c7def879aadbf153dd09 894eaa7736a6f14ee93de7b112c573bba74af58e Nick Westbrook <ntw3001@gmail.com> 1736779636 +0900	commit: created project #7 and implemented the random image
+894eaa7736a6f14ee93de7b112c573bba74af58e cf9d7c623e346e531bba5d2528b5f8e956607e01 Nick Westbrook <ntw3001@gmail.com> 1736780732 +0900	commit: got the styling mostly ready to go
+cf9d7c623e346e531bba5d2528b5f8e956607e01 3488d2d986378856a6d3eb22ce4c7dcb6b5917a9 Nick Westbrook <ntw3001@gmail.com> 1736780779 +0900	commit: removed the active class that I was testing with because I'll forget it was there later
+3488d2d986378856a6d3eb22ce4c7dcb6b5917a9 a962285dfca58adb46228548aa4da6a0d01022cd Nick Westbrook <ntw3001@gmail.com> 1736950979 +0900	commit: gixed up the style so it's all nicely centred
+a962285dfca58adb46228548aa4da6a0d01022cd 440191e942d23ba89bd25c9dbb786c54d5288e03 Nick Westbrook <ntw3001@gmail.com> 1736952231 +0900	commit: Fixed up the tab switching Javascript
+440191e942d23ba89bd25c9dbb786c54d5288e03 6ff1bd5d36925cc1da5b5ed1d0ef7180156ccc9b Nick Westbrook <ntw3001@gmail.com> 1736952951 +0900	commit: refactored it a little bit
+6ff1bd5d36925cc1da5b5ed1d0ef7180156ccc9b 1ff6282232d40a62001582cb1f8dfa5ad120fd60 Nick Westbrook <ntw3001@gmail.com> 1736957629 +0900	commit: fixed up some flexbox arrangement, hover and focus effects on the tabs
+1ff6282232d40a62001582cb1f8dfa5ad120fd60 a42408d7f721d6d78592d3ccb390c5a9ee7f92f2 Nick Westbrook <ntw3001@gmail.com> 1737211438 +0900	commit: set up the files for the login form exercise
+a42408d7f721d6d78592d3ccb390c5a9ee7f92f2 efeb319aac53e961c535b35d0d1d6646595861e8 Nick Westbrook <ntw3001@gmail.com> 1737297944 +0900	commit: added a little testbed for puzzles and such
+efeb319aac53e961c535b35d0d1d6646595861e8 12cf8aab320e26d369e9fc362f5746b96a0a1629 Nick Westbrook <ntw3001@gmail.com> 1737470596 +0900	commit: built the login form, not the functionality
+12cf8aab320e26d369e9fc362f5746b96a0a1629 ba43ca5bb7ec10680408289afd16a137008735b7 Nick Westbrook <ntw3001@gmail.com> 1737556931 +0900	commit: did the styling, looks nice
+ba43ca5bb7ec10680408289afd16a137008735b7 a3346d302c437c0ada66559ead2bf7b0e1f6a9a4 Nick Westbrook <ntw3001@gmail.com> 1737643653 +0900	commit: added functionality for password looking button
+a3346d302c437c0ada66559ead2bf7b0e1f6a9a4 7b1a3232e82c106529d009a10bb3b6a799236c1c Nick Westbrook <ntw3001@gmail.com> 1737655518 +0900	commit: added the beginnings of a validation arrangement
+7b1a3232e82c106529d009a10bb3b6a799236c1c 86d73f12eb2ccca5893b1b552872f90d21237349 Nick Westbrook <ntw3001@gmail.com> 1737657439 +0900	commit: added success and error messages for login
+86d73f12eb2ccca5893b1b552872f90d21237349 28babc70dd21a63c080133360334946128868758 Nick Westbrook <ntw3001@gmail.com> 1737809549 +0900	commit: added a forgot password button
+28babc70dd21a63c080133360334946128868758 4564eaa3b8d08025f92fe46119a06e0b2ffce4e6 Nick Westbrook <ntw3001@gmail.com> 1737810209 +0900	commit: finished the piece but have some tweaking to do still
+4564eaa3b8d08025f92fe46119a06e0b2ffce4e6 b8ddc07784b3377a80cd8aaae24d1a4ddf91a67a Nick Westbrook <ntw3001@gmail.com> 1737811093 +0900	commit: fixed up te email validation a bit
+b8ddc07784b3377a80cd8aaae24d1a4ddf91a67a bbe3d9b70712c7a99c36582ebbe17d0807773411 Nick Westbrook <ntw3001@gmail.com> 1737982727 +0900	commit: added boilerplate for next project
+bbe3d9b70712c7a99c36582ebbe17d0807773411 2dd7a8a53b9962bc27269cf8465daef3308c2653 Nick Westbrook <ntw3001@gmail.com> 1737983743 +0900	commit: did a little bit of niceness work on the styling in testbed
+2dd7a8a53b9962bc27269cf8465daef3308c2653 5fbb0e5a7861c8bed758c13135721568b50b6110 Nick Westbrook <ntw3001@gmail.com> 1738076073 +0900	commit: built a silly little form to describe the cows
+5fbb0e5a7861c8bed758c13135721568b50b6110 2599c07c5cf3e514c406454d5bdc3fae525d1f08 Nick Westbrook <ntw3001@gmail.com> 1738076271 +0900	commit: added the results segment
+2599c07c5cf3e514c406454d5bdc3fae525d1f08 4d67df950cd0c40e7d49ff19bd30252295697831 Nick Westbrook <ntw3001@gmail.com> 1738162330 +0900	commit: did the css, very stylish
+4d67df950cd0c40e7d49ff19bd30252295697831 61e0ecc58bc6f592743426d30108c68a3b0762f6 Nick Westbrook <ntw3001@gmail.com> 1738249106 +0900	commit: did the javascript for calculating the tip, not quoite ready yet
+61e0ecc58bc6f592743426d30108c68a3b0762f6 eb1998107cf27fdc793d41139722439ca5fe787f Nick Westbrook <ntw3001@gmail.com> 1738249788 +0900	commit: got the javascript up and running
+eb1998107cf27fdc793d41139722439ca5fe787f da2f4e3a22e2ed5b07f3d5b4bd7b4306797ea7ca Nick Westbrook <ntw3001@gmail.com> 1738424702 +0900	commit: done the beginnign html for the drag and drop exercise
+da2f4e3a22e2ed5b07f3d5b4bd7b4306797ea7ca 95b5c54dfe932c22ddec0cee3cd8d830a618c4a7 Nick Westbrook <ntw3001@gmail.com> 1738426374 +0900	commit: done the styling, added dragon
+95b5c54dfe932c22ddec0cee3cd8d830a618c4a7 06d20e2a103461d8f38164181e3af4964f9e7b6a Nick Westbrook <ntw3001@gmail.com> 1738430110 +0900	commit: killed the puzzle wih my tail
+06d20e2a103461d8f38164181e3af4964f9e7b6a fb3abce7c426d4a8672ad34b1617c4cc5668ecab Nick Westbrook <ntw3001@gmail.com> 1738430638 +0900	commit: altered text in typpewriter script exercise, fixed some bugs in cowculator exercise
+fb3abce7c426d4a8672ad34b1617c4cc5668ecab 4c414a0645aaad759e6e0fcec7d4b18941467e4a Nick Westbrook <ntw3001@gmail.com> 1738431894 +0900	commit: added a silly eye for looking when you are looking for the dragon
+4c414a0645aaad759e6e0fcec7d4b18941467e4a 9c13c344476e41c562aba29938eb22bad607d752 Nick Westbrook <ntw3001@gmail.com> 1738590395 +0900	commit: added links, htnml and styling for progress bar
+9c13c344476e41c562aba29938eb22bad607d752 a3a3942eb114b233a219e667c6cc9e3c56585752 Nick Westbrook <ntw3001@gmail.com> 1738592169 +0900	commit: finished the image unblurring trick but there's gonna have to be a reblurring trick added
+a3a3942eb114b233a219e667c6cc9e3c56585752 bbde501606dfc7f5ac8039c3c58f20bacc01c8f0 Nick Westbrook <ntw3001@gmail.com> 1738594188 +0900	commit: added the functionality to reverse the previous functonality
+bbde501606dfc7f5ac8039c3c58f20bacc01c8f0 5935e7e13a4c88d60ab4d5210a3af2a5c97a6080 Nick Westbrook <ntw3001@gmail.com> 1738679668 +0900	commit: added boilerplate for text formatter
+5935e7e13a4c88d60ab4d5210a3af2a5c97a6080 fc741025fc43ec8d9615b5302bdae8f9d4109827 Nick Westbrook <ntw3001@gmail.com> 1738848888 +0900	commit: don html for tis text formatter
+fc741025fc43ec8d9615b5302bdae8f9d4109827 92cc2a0c5fec8ff619c5ed6d5955b015fc0d3bf1 Nick Westbrook <ntw3001@gmail.com> 1738851197 +0900	commit: added some cute features such as buttons becoming depressed and then mutually exclusive effects releasing the other buttons
+92cc2a0c5fec8ff619c5ed6d5955b015fc0d3bf1 1f94f0eb45cdd3ce386ece2ac0b0b0fa8b159875 Nick Westbrook <ntw3001@gmail.com> 1738853327 +0900	commit: added a sweet spongebob converter
+1f94f0eb45cdd3ce386ece2ac0b0b0fa8b159875 cbd29c245ab620a6d9f140c7c283cafc0184b355 Nick Westbrook <ntw3001@gmail.com> 1738898608 +0900	commit: empowered the spongebob button, added a revert button, and all buttons now lose the active class when the input field is edited
+cbd29c245ab620a6d9f140c7c283cafc0184b355 ac5b69891bd839b8f5ff1aa16e5a282369e96c43 Nick Westbrook <ntw3001@gmail.com> 1738936599 +0900	commit: did setup for the legendary task list exercise
+ac5b69891bd839b8f5ff1aa16e5a282369e96c43 0a2ac6e80885f406dfb2292412dcd4e2a8c4c3e6 Nick Westbrook <ntw3001@gmail.com> 1739093253 +0900	commit: did some more work on the robot query
+0a2ac6e80885f406dfb2292412dcd4e2a8c4c3e6 0267ebd0e83637393ab9019724a71a866558566a Nick Westbrook <ntw3001@gmail.com> 1739113868 +0900	commit: altered the robot test so it displays similar colours, raising the challange
+0267ebd0e83637393ab9019724a71a866558566a d0f201321a9a1f969fd1ea766e1f43965a9e6698 Nick Westbrook <ntw3001@gmail.com> 1739114503 +0900	commit: allowed the robot test to show a wider range of colours, sometimes but not always
+d0f201321a9a1f969fd1ea766e1f43965a9e6698 3e70f8ab3bf27d56b6a9bf314a67e8b597bb0aaf Nick Westbrook <ntw3001@gmail.com> 1739116030 +0900	commit: narrowed the likely range of colour values for the robot test, so it should yield colours of similar brightness
+3e70f8ab3bf27d56b6a9bf314a67e8b597bb0aaf 3f9114cc6aa10ff1fe1ed2735f030e21048d8451 Nick Westbrook <ntw3001@gmail.com> 1739198971 +0900	commit: started buildin up the ui for the task list
+3f9114cc6aa10ff1fe1ed2735f030e21048d8451 1d00e45269c05c823fa9ee02a6cf7e495ceee663 Nick Westbrook <ntw3001@gmail.com> 1739200449 +0900	commit: did the css
+1d00e45269c05c823fa9ee02a6cf7e495ceee663 f066afad1a7c4ac467eb05005c77e17c5c1f64b7 Nick Westbrook <ntw3001@gmail.com> 1739371502 +0900	commit: finished the task list, animations could be cuter
+f066afad1a7c4ac467eb05005c77e17c5c1f64b7 93528262e5a9c83369e2c3e47ef78e030bfbb483 Nick Westbrook <ntw3001@gmail.com> 1739377696 +0900	commit: made some neater animations for adding and deleting elements
+93528262e5a9c83369e2c3e47ef78e030bfbb483 92d98406f430053254ff1b3d48379381923bca23 Nick Westbrook <ntw3001@gmail.com> 1739543867 +0900	commit: plopped down a flag for the accordions
+92d98406f430053254ff1b3d48379381923bca23 b6a26018387e63b3d2942c87e64d85c1312bec76 Nick Westbrook <ntw3001@gmail.com> 1739635368 +0900	commit: set up html and css for the accoridon
+b6a26018387e63b3d2942c87e64d85c1312bec76 37ced5b191682e8e6586e32689cb559b6e6b3ef2 Nick Westbrook <ntw3001@gmail.com> 1739635870 +0900	commit: did th collapsing function in main.js
+37ced5b191682e8e6586e32689cb559b6e6b3ef2 4cfd19e6ea08814f0c1b459ea9891c494ada0f59 Nick Westbrook <ntw3001@gmail.com> 1739801013 +0900	commit: started up the next one
+4cfd19e6ea08814f0c1b459ea9891c494ada0f59 39b1dd04538c00650c55ae02c3905d148bc07e19 Nick Westbrook <ntw3001@gmail.com> 1739804252 +0900	commit: got the timeline set up and images appearing, no animation done yet
+39b1dd04538c00650c55ae02c3905d148bc07e19 ced3cdf870ab382e610435dc738199e5bbd1e4ca Nick Westbrook <ntw3001@gmail.com> 1739890955 +0900	commit: did some dynamic sizing but it doesn't seem to be very good
+ced3cdf870ab382e610435dc738199e5bbd1e4ca d73bc7679acf5e65ac7561087c748e24b566f99b Nick Westbrook <ntw3001@gmail.com> 1739976060 +0900	commit: finished the scrollign pictures appearing and disappearing project I guess
+d73bc7679acf5e65ac7561087c748e24b566f99b 881851d6f450f26f48cd1607c1190d3e8c97f241 Nick Westbrook <ntw3001@gmail.com> 1739982380 +0900	commit: started up the quiz segment
+881851d6f450f26f48cd1607c1190d3e8c97f241 02b50fe17cd60098978d5ceb5bfcd4fef401ecf1 Nick Westbrook <ntw3001@gmail.com> 1740073928 +0900	commit: set up html example for a single 4-choise question
+02b50fe17cd60098978d5ceb5bfcd4fef401ecf1 d0c581d2ef3933914622d7d29bb7a53ad7e71899 Nick Westbrook <ntw3001@gmail.com> 1740303983 +0900	commit: sorted out a nice look for the quiz
+d0c581d2ef3933914622d7d29bb7a53ad7e71899 a642a8228ad85c35aaebc4a098cb7e66b2665223 Nick Westbrook <ntw3001@gmail.com> 1740405543 +0900	commit: fnished up the quiz, got to make tem buttons nicer though
+a642a8228ad85c35aaebc4a098cb7e66b2665223 1e641f4fb2131b72ee5f147c77f12d6c8dc072a0 Nick Westbrook <ntw3001@gmail.com> 1740407804 +0900	commit: chenged up the style a little and made the quiz a bit nicer
+                                                                                                                                                                          
