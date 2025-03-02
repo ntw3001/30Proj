@@ -10,12 +10,13 @@
 }
 
 body{
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-overflow: hidden;
-transition: var(--transition-speed) ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: var(--transition-speed) ease;
+  background-size: cover;
 }
 
 .overlay {
@@ -32,7 +33,7 @@ transition: var(--transition-speed) ease;
   background-color: var(--primary-color);
   position: relative;
   width: 70vw;
-  height: 70vh;
+  height: 85vh;
   overflow: hidden;
 }
 
@@ -65,17 +66,36 @@ transition: var(--transition-speed) ease;
   right: calc(50vw - 50px);
 }
 
-.animateTransition {
-  transition: swing var(--transition-speed) ease;
+.animateTransitionRight {
+  animation: swingRight 0.2s ease;
 }
 
-@keyframes swing {
+@keyframes swingRight {
   0%{
     transform: translateX(5px);
     filter: blur(4px);
   }
-  50%{
+  80%{
+    transform: translateX(-20px);
+    filter: blur(2px);
+  }
+  100%{
+    transform: translateX(0px);
+    filter: blur(0px);
+  }
+}
+
+.animateTransitionLeft {
+  animation: swingLeft 0.2s ease;
+}
+
+@keyframes swingLeft {
+  0%{
     transform: translateX(-5px);
+    filter: blur(4px);
+  }
+  80%{
+    transform: translateX(20px);
     filter: blur(2px);
   }
   100%{

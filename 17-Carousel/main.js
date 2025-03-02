@@ -4,39 +4,42 @@ const imgs = document.querySelectorAll('.img');
 let activeImg = 0;
 
 setImgAsBackground();
+setActiveImg("Right");
 
 function setImgAsBackground() {
     body.style.backgroundImage = imgs[activeImg].style.backgroundImage;
 }
 
-function setActiveImg() {
+function setActiveImg(direction) {
   imgs.forEach((img) => {
-    console.log(img);
     img.classList.remove('active');
-    img.classList.remove("animateTransition");
+    img.classList.remove("animateTransitionLeft");
+    img.classList.remove("animateTransitionRight");
+  });
   imgs[activeImg].classList.add('active');
-  imgs[activeImg].classList.add('animateTransition');
-  }
-)};
+  imgs[activeImg].classList.add(`animateTransition${direction}`);
+  console.log(imgs);
+}
 
 const arrowBtns = document.querySelectorAll('.arrow-btn');
-console.log(arrowBtns);
 
 arrowBtns.forEach((btn) => {
   btn.onclick= () => {
     if(btn.classList.contains('right-arrow')) {
+      direction = 'Right';
       activeImg++;
       if (activeImg >= imgs.length) {
         activeImg = 0;
       }
     }
     else {
+      direction = 'Left';
       activeImg--;
       if (activeImg < 0) {
         activeImg = imgs.length - 1;
       }
     }
-    setActiveImg();
+    setActiveImg(direction);
     console.log(`set img ${activeImg}`);
     setImgAsBackground();
   }
