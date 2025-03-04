@@ -41,4 +41,51 @@ h1 {
   position: absolute;
   cursor: pointer;
   top: 50%;
+  width: auto;
+  margin-top: -2rem;
+  padding: 1rem;
+  color: var(--prim-c);
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 1.2rem;
+  border-radius: 0 3px 3px 0;
+  transition: var(--trans-speed) ease-out;
+}
+
+.next-btn {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.prev-btn:active,
+.next-btn:active {
+  color: var(--sec-c);
+}
+
+.text {
+  position: absolute;
+  bottom: 0;
+  padding: .8rem 1.5rem;
+  color: var(--prim-c);
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  width: 650px;
+}
+
+.numbertext {
+  position: absolute;
+  font: 1rem;
+  top: 0;
+  right: 0;
+  color: var(--prim-c);
+  background: rgba(0, 0, 0, 0.5);
+  padding: .8rem 1.5rem;
+  font-weight: bold;
+  font-size: 1.2rem;
 }
