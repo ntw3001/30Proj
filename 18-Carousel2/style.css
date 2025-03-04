@@ -3,3 +3,42 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+img {
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 2rem 0;
+  font-weight: 100;
+}
+
+:root {
+  --prim-c: #fff;
+  --sec-c: #717171;
+  --trans-speed: 0.5s;
+}
+
+.slides-container {
+  max-width: 700px;
+  position: relative;
+  margin: auto;
+  margin-bottom: 2rem;
+}
+
+.slide {
+  display: none;
+}
+
+.prev-btn,
+.next-btn {
+  position: absolute;
+  cursor: pointer;
+  top: 50%;
+}
