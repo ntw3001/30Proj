@@ -85,7 +85,39 @@ h1 {
   right: 0;
   color: var(--prim-c);
   background: rgba(0, 0, 0, 0.5);
-  padding: .8rem 1.5rem;
+  padding: .8rem
   font-weight: bold;
   font-size: 1.2rem;
+}
+
+.dots-container {
+  text-align: center;
+}
+
+.dot {
+  cursor: pointer;
+  height: 1rem;
+  width: 1rem;
+  margin: 0 2px;
+  background-color: #ddd;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color var(--trans-speed) ease-out;
+}
+
+.active, .dot:hover {
+  background-color: var(--sec-c);
+}
+
+.fade {
+  animation: fade var(--trans-speed) ease-out;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+  }
 }
