@@ -70,7 +70,7 @@ h1 {
 
 .text {
   position: absolute;
-  bottom: 0;
+  bottom: 8px;
   padding: .8rem 1.5rem;
   color: var(--prim-c);
   text-align: center;
