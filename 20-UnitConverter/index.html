@@ -3,9 +3,53 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <link stylesheet="style.css" rel="stylesheet">
+  <title>Who can win</title>
 </head>
 <body>
-  
+  <div class="contenders-container">
+    <div class="contender-one">
+      <img src="./img/118 - Goblin Berserk (Medium).png" alt="a goblin">
+      <ul>
+        <li><span class="output">31</span></li>
+        <li><input type="text" id="mass"/></li>
+        <li><input type="text" id="dis"/></li>
+        <li><input type="text" id="dis"/></li>
+        <li><input type="text" id="dis"/></li>
+      </ul>
+    </div>
+    <div class="contenders">
+      <h1>V<br/>S</h1>
+      <ul>
+        <li>Age</li>
+        <li>Weight</li>
+        <li>Height</li>
+        <li>Reach</li>
+        <li>Leg Reach</li>
+      </ul>
+    </div>
+    <div class="contender-two">
+      <img src="./img/307 - Deep One Female (Medium).png" alt="a goblin">
+      <ul>
+        <li><span class="output">31</span></li>
+        <li><input type="text" id="mass"/></li>
+        <li><input type="text" id="dis"/></li>
+        <li><input type="text" id="dis"/></li>
+        <li><input type="text" id="dis"/></li>
+      </ul>
+    </div>
+  </div>
+
+  <form class="units-system">
+    <h4>Units</h4>
+    <input type="radio" id="imp" name="units"/>
+    <label for="imp">Imperial</label>
+    <input type="radio" id="met" name="units"/>
+    <label for="met">Metric</label>
+
+  </form>
+
+
+  <script src="main.js"></script>
 </body>
 </html>
