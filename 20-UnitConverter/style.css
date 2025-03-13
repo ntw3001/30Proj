@@ -1,5 +1,76 @@
-*, ::before, ::after {
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital@0;1&display=swap');
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+a, li {
+  text-decoration: none;
+  list-style: none;
+}
+
+:root {
+  --red: #bs0025;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background: linear-gradient(90deg, #000, #6d6d6d, #000);
+  color: #ddd;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 1px #333;
+}
+
+img {
+  height: 225px;
+  position:relative;
+}
+
+.contenders-container {
+  display: grid;
+  grid-template-columns: 1fr 150px 1fr;
+  margin-top: 20vh;
+  width: 600px;
+  margin: 20vh auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.units-system {
+  position: relative;
+  width: 300px;
+  margin: auto;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  width: 70px;
+  margin: auto;
+  background-color: var(--red);
+  border-radius: 3px;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
+}
+
+.contender-one, .contender-two {
+  display: flex;
+  flex-direction: column;
+  margin: 0 1rem;
+  text-align: center;
+}
+
+input {
+max-width: 50px;
+background-color: transparent;
+text-align: center;
+color: #ddd;
+}
+
+input::-webkit-outer-spine-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
