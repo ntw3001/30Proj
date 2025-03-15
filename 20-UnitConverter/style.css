@@ -12,7 +12,7 @@ a, li {
 }
 
 :root {
-  --red: #bs0025;
+  --red: #b50025;
 }
 
 body {
@@ -25,7 +25,8 @@ body {
 }
 
 img {
-  height: 225px;
+  height: 148px;
+  width: 148px;
   position:relative;
 }
 
@@ -62,6 +63,34 @@ h1 {
   text-align: center;
 }
 
+.contenders {
+  text-align: center;
+}
+
+.contenders ul {
+  margin-top: 2rem;
+  text-transform: uppercase;
+}
+
+.contenders ul li {
+  background-color: var(--red);
+  border-radius: 3px;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
+}
+
+.contender-one ul li {
+  text-align: right;
+}
+
+.contender-two ul li {
+  text-align: left;
+}
+
+ul li {
+  margin: 1rem 0;
+  padding: .3rem 0;
+}
+
 input {
 max-width: 50px;
 background-color: transparent;
@@ -73,4 +102,69 @@ input::-webkit-outer-spine-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+.output {
+  margin: 0.1rem;
+}
+
+.contender-one img {
+  animation: slideFromLeft 1s ease-out;
+}
+
+.contender-two img {
+  animation: slideFromRight 1s ease-out;
+}
+
+@keyframes slideFromLeft {
+  from {
+    left: -500px;
+    opacity: 0;
+  }
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes slideFromRight {
+  from {
+    right: -500px;
+    opacity: 0;
+  } to {
+    right: 0;
+    opacity: 1;
+  }
+}
+
+h1 {
+  animation: vsTransition 1s ease-out;
+}
+
+@keyframes vsTransition {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  } to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.contenders li {
+  animation: rotation 1s ease-out;
+}
+
+@keyframes rotation {
+  from {
+    opacity: 0;
+    transform: rotateX(0deg);
+  } to {
+    opacoty: 1;
+    transform: rotateX(360deg);
+  }
+}
+
+input {
+  animation: vsTransition 1s ease-out;
 }
