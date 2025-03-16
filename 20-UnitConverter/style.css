@@ -27,15 +27,15 @@ body {
 img {
   height: 148px;
   width: 148px;
-  position:relative;
+  position: relative;
+  margin: auto;
 }
 
 .contenders-container {
   display: grid;
   grid-template-columns: 1fr 150px 1fr;
-  margin-top: 20vh;
   width: 600px;
-  margin: 20vh auto;
+  margin: 20vh auto 0;
   justify-content: center;
   align-items: center;
 }
@@ -92,6 +92,7 @@ ul li {
 }
 
 input {
+  scale: 1.2;
 max-width: 50px;
 background-color: transparent;
 text-align: center;
@@ -160,7 +161,7 @@ h1 {
     opacity: 0;
     transform: rotateX(0deg);
   } to {
-    opacoty: 1;
+    opacity: 1;
     transform: rotateX(360deg);
   }
 }
@@ -179,29 +180,36 @@ input {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 5vh;
 }
 .confirm-btn  {
+  color: #ddd;
+  scale: 1.2;
   background-color: var(--red);
   border: none;
   border-radius: 3px;
   padding: 0.5rem 1rem;
   margin-top: 1rem;
   cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px 2px;
 }
 
 .confirm-btn:hover {
-  background-color: #ff0000;
+  background-color: #c70303;
+  transform: scale(1.1);
 }
 
 .reload-btn {
-  background-color: var(--red);
+  color: #ddd;
+  background-color: #6d5656;
   border: none;
   border-radius: 3px;
   padding: 0.5rem 1rem;
   margin-top: 1rem;
   cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px 2px;
 }
 
 .reload-btn:hover {
-  background-color: #ff0000;
+  background-color: var(--red);
 }
