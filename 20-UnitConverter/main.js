@@ -12,7 +12,7 @@ function inputToOutput() {
         } else if (e.target.id === "dis") {
           e.target.parentElement.innerHTML = `<span class="output" id="dis">${targetInputValue}m</span>`;
         } else {
-          e.target.parentElement.innerHTML = `<span class="output" id="dis">${targetInputValue}y</span>`;
+          e.target.parentElement.innerHTML = `<span class="output" id="age">${targetInputValue}y</span>`;
         }
       }
     });
@@ -33,7 +33,7 @@ confirmBtn.addEventListener("click", () => {
       } else if (input.id === "dis") {
         input.parentElement.innerHTML = `<span class="output" id="dis">${targetInputValue}m</span>`;
       } else {
-        input.parentElement.innerHTML = `<span class="output" id="dis">${targetInputValue}y</span>`;
+        input.parentElement.innerHTML = `<span class="output" id="age">${targetInputValue}y</span>`;
       }
     } else {
       input.parentElement.innerHTML = `<input type="text" class="blank" placeholder="—" />`;
