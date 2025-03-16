@@ -11,7 +11,7 @@
     <div class="contender-one">
       <img src="./img/118 - Goblin Berserk (Medium).png" alt="a goblin">
       <ul>
-        <li><span class="output">31</span></li>
+        <li><input type="number" id="age"/></li>
         <li><input type="number" id="mass"/></li>
         <li><input type="number" id="dis"/></li>
         <li><input type="number" id="dis"/></li>
@@ -31,7 +31,7 @@
     <div class="contender-two">
       <img src="./img/307 - Deep One Female (Medium).png" alt="a goblin">
       <ul>
-        <li><span class="output">31</span></li>
+        <li><input type="number" id="age"/></li>
         <li><input type="number" id="mass"/></li>
         <li><input type="number" id="dis"/></li>
         <li><input type="number" id="dis"/></li>
@@ -39,12 +39,17 @@
       </ul>
     </div>
   </div>
+  <div class= "btn-container">
+    <button class="confirm-btn">Confirm Values</button>
+    <button class="reload-btn">Reset</button>
+  </div>
+
 
   <form class="units-system">
     <h4>Units</h4>
     <input type="radio" id="imp" name="units"/>
     <label for="imp">Imperial</label>
-    <input type="radio" id="met" name="units"/>
+    <input type="radio" id="met" name="units" checked/>
     <label for="met">Metric</label>
 
   </form>

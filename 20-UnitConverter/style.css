@@ -168,3 +168,40 @@ h1 {
 input {
   animation: vsTransition 1s ease-out;
 }
+
+.blank {
+  font-size: 1rem;
+  border: none;
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.confirm-btn  {
+  background-color: var(--red);
+  border: none;
+  border-radius: 3px;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.confirm-btn:hover {
+  background-color: #ff0000;
+}
+
+.reload-btn {
+  background-color: var(--red);
+  border: none;
+  border-radius: 3px;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.reload-btn:hover {
+  background-color: #ff0000;
+}
