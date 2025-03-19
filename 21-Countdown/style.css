@@ -3,3 +3,76 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+header {
+  height: 94vh;
+  background: url(./img/lamassu.jpg) no-repeat center/cover;
+  position: relative;
+}
+
+.offer-container {
+  width: 300px;
+  background-color: #fff;
+  padding: 1rem 0.5rem;
+  box-shadow: 1px 2px 5px 1px rgba(0, 0, 0, 0.7);
+  border-radius: 3px;
+  position: absolute;
+  top: 10vh;
+  right: 10vw;
+}
+
+.btn:hover {
+  background-color: rgb(250, 100, 0);
+  animation: quiver 0.25s infinite;
+}
+
+@keyframes quiver {
+  0% {
+    transform: translateY(-1px) translateX(2px) rotate(0deg);
+  }
+  25% {
+    transform: translateY(2px) translateX(-2px) rotate(2deg);
+  }
+  50% {
+    transform: translateY(-2px) translateX(-2px) rotate(-3deg);
+  }
+  75% {
+    transform: translateY(1px) translateX(3px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(2px) translateX(-2px) rotate(-1deg);
+  }
+}
+
+.countdown-container {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  text-align: center;
+}
+
+.countdown-container h6 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #fff
+}
+
+#offer {
+  background-color: #fff;
+  width: 100%;
+  font-weight: 600;
+  animation: fade 1s ease-in-out infinite;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 401px) {
+  .offer-container {
+    display: none;
+  }
+}
