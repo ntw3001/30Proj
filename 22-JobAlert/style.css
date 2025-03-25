@@ -113,13 +113,13 @@ input {
 
 input::placeholder {
   color: #fff;
-  font-size: .8rem;
+  font-size: 1.2rem;
+
 }
 
 ::-webkit-input-placeholder {
   white-space: pre-line;
   position: relative;
-  top: -5px;
 }
 
 .slide-in {
@@ -140,7 +140,6 @@ input::placeholder {
 .slide-out {
   animation: animateSlideOut var(--speed) ease-in;
   width: 0%;
-  box-shadow: var(--boxShadow);
 }
 
 @keyframes animateSlideOut {
