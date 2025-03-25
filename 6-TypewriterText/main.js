@@ -1,4 +1,3 @@
-let text = document.getElementById('typewriter');
 text = document.querySelector("#typewriter h2");
 
 let str = text.textContent.split("");

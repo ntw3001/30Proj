@@ -64,7 +64,7 @@ aside {
   flex-direction: column;
   justify-content: space-around;
   align-content: space-around;
-  margin-left: .5rem;
+  margin-left: .25rem;
 }
 
 .container {
@@ -114,7 +114,17 @@ input {
 input::placeholder {
   color: #fff;
   font-size: 1.2rem;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out 0.2s;
+}
 
+input.slide-in::placeholder {
+  opacity: 1;
+}
+
+input.slide-out::placeholder {
+  opacity: 0;
+  transition: opacity 0.25s ease-in-out;
 }
 
 ::-webkit-input-placeholder {
@@ -124,17 +134,8 @@ input::placeholder {
 
 .slide-in {
   animation: animateSlideIn var(--speed) ease-in;
-  width: 100%;
+  width: 300px;
   box-shadow: var(--boxShadow);
-}
-
-@keyframes animateSlideIn {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 100%;
-  }
 }
 
 .slide-out {
@@ -142,9 +143,18 @@ input::placeholder {
   width: 0%;
 }
 
+@keyframes animateSlideIn {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 300px;
+  }
+}
+
 @keyframes animateSlideOut {
   0% {
-    width: 100%;
+    width: 300px;
   }
   100% {
     width: 0;
@@ -158,27 +168,28 @@ input::placeholder {
 
 @keyframes container-1 {
   from {
-    top: -200px;
+    top: -120vh;
     opacity: 0;
   }
   to {
     top: 0;
-    opcity: 1;
+    opacity: 1;
   }
 }
 
 .container:nth-child(4) {
   position: relative;
   animation: container-2 1s ease-out;
+  top: -10vh;
 }
 
 @keyframes container-2 {
   from {
-    top: -500px;
+    top: -150vh;
     opacity: 0;
   }
   to {
-    top: 0;
+    top: -10vh;
     opacity: 1;
   }
 }
@@ -186,16 +197,17 @@ input::placeholder {
 .container:nth-child(5) {
   position: relative;
   animation: container-3 1s ease-out;
+  top: -20vh;
 }
 
 @keyframes container-3 {
   from {
-    top: -800px;
+    top: -180vh;
     opacity: 0;
   }
   to {
     opacity: 1;
-    top: 0;
+    top: -20vh;
   }
 }
 
