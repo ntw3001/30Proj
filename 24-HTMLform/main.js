@@ -26,5 +26,20 @@ form.innerHTML = `
     ${createLabel('Birthdate:')}
     ${createInput('date', 'birthdate', null)}
   </div>
+  <div>
+    ${createLabel('Email:')}
+    ${createInput('email', 'email', 'Enter your email')}
+  </div>
+  <div>
+    ${createLabel('Password:')}
+    ${createInput('password', 'password', 'Enter your password')}
+  </div>
+  <button class="btn" type="submit">Submit</button>
   `
 document.body.appendChild(form);
+
+const divContainer = document.queryselector("form")
+  .querySelectorAll("div");
+divContainer.forEach (function(div) {
+  div.className = "input-container";
+});
