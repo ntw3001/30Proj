@@ -22,5 +22,9 @@ form.innerHTML = `
     ${createLabel('Last Name:')}
     ${createInput('text', 'lastName', 'Enter your last name')}
   </div>
+  <div>
+    ${createLabel('Birthdate:')}
+    ${createInput('date', 'birthdate', null)}
+  </div>
   `
 document.body.appendChild(form);

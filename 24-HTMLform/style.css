@@ -9,9 +9,17 @@
 body {
   font-family: 'Roboto', sans-serif;
   background-color: #01202c;
-  color: #fff;
+  color: #e0e0e0;
   letter-spacing: 1.5px;
   position: relative;
   margin: 3rem;
   text-shadow: 1px 2px 1px #333;
+}
+
+input::placeholder {
+  color: #e0e0e0;
+}
+
+input[type="date"] {
+  color: #e0e0e0;
 }
