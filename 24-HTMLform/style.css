@@ -27,3 +27,32 @@ input::placeholder {
 input[type="date"] {
   color: #bdbdbd;
 }
+
+h2, h4 {
+  color: #2bbbad;
+}
+
+.category {
+  color: #2bbbad;
+  font-size: 1.2rem;
+  margin-top: .1rem;
+}
+
+.value {
+  color: #e0e0e0;
+  font-size: 1rem;
+}
+
+.animate-in {
+  position: relative;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

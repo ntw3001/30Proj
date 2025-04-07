@@ -6,7 +6,8 @@ container.style.width = '100%';
 
 const form = document.createElement('form');
 form.id = 'myForm';
-form.style.flex = "0 0 360px";
+form.style.flex = "0 0 360px";4
+form.style.marginRight = "20px";
 
 const userList = document.createElement('div');
 userList.id = "userList";
@@ -16,7 +17,6 @@ userList.style.gap = "20px";
 userList.style.flex = "1";
 userList.style.minWidth = "300px";
 userList.style.maxWidth = "100%";
-// userList.style.maxWidth = "calc(100vw - 360px)";
 
 document.body.appendChild(container);
 container.appendChild(form);
@@ -109,13 +109,17 @@ form.addEventListener('submit', function(event) {
     details.style.listStyleType = "none";
     details.style.display = "flex";
     details.style.flexDirection = "column";
+    details.classList.add("animate-in");
 
     details.innerHTML = `
       <h4>${getFullName()}</h4>
       <img  style="height: 150px; width: 200px; border-radius: 25px;" src="http://placebeard.it/g/640/480" alt="User Image" />
-      <span>Birthdate: <span>${birthdate}</span></span>
-      <span>Age: <span>${age}</span></span>
-      <span>Email: <span>${email}</span></span>
+      <span class="category">Birthdate: <span class="value">${birthdate}</span></span>
+      <span class="category">Age: <span class="value">${age}</span></span>
+      <span class="category">Power Level: <span class="value">${Math.floor(Math.random() * 10)}</span></span>
+      <span class="category">Intellect: <span class="value">${Math.floor(Math.random() * 10)}</span></span>
+      <span class="category">Charisma: <span class="value">${Math.floor(Math.random() * 10)}</span></span>
+      <span class="category">Email: <span class="value">${email}</span></span>
     `;
 
     userList.appendChild(details);
