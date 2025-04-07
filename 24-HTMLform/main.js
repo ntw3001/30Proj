@@ -1,6 +1,26 @@
+const container = document.createElement('div');
+container.id = 'container';
+container.style.display = 'flex';
+container.style.flexWrap = 'wrap';
+container.style.width = '100%';
+
 const form = document.createElement('form');
 form.id = 'myForm';
-form.style.width = '360px';
+form.style.flex = "0 0 360px";
+
+const userList = document.createElement('div');
+userList.id = "userList";
+userList.style.display = "grid";
+userList.style.gridTemplateColumns = "repeat(auto-fit, minmax(200px, 1fr))";
+userList.style.gap = "20px";
+userList.style.flex = "1";
+userList.style.minWidth = "300px";
+userList.style.maxWidth = "100%";
+// userList.style.maxWidth = "calc(100vw - 360px)";
+
+document.body.appendChild(container);
+container.appendChild(form);
+container.appendChild(userList);
 
 function createLabel(text){
   const label = `<label>${text}</label>`
@@ -36,7 +56,6 @@ form.innerHTML = `
   </div>
   <button class="btn" type="submit">Submit</button>
   `
-document.body.appendChild(form);
 
 const divContainer = document.querySelector("form")
   .querySelectorAll("div");
@@ -46,8 +65,7 @@ divContainer.forEach (function(div) {
 
 form.addEventListener('submit', function(event) {
   event.preventDefault();
-  document.body.style.display = "grid";
-  document.body.style.gridTemplateColumns = "1fr 1fr";
+
 
   const firstName = document.getElementById('firstName').value;
   const lastName = document.getElementById('lastName').value;
@@ -71,20 +89,35 @@ form.addEventListener('submit', function(event) {
     return `${firstName} ${lastName}`;
   }
 
+  function calculateAge(birthdate) {
+    const birthDate = new Date(birthdate);
+    const today = new Date();
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const monthDiff = today.getMonth() - birthDate.getMonth();
+    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+      age--;
+    }
+    return age;
+  }
+  const age = calculateAge(birthdate);
+
   validateUser();
 
   function createUser() {
-    const ul = document.createElement('ul');
-    ul.id = "userDetails";
-    ul.style.listStyleType = "none";
+    const details = document.createElement('div');
+    details.id = "userDetails";
+    details.style.listStyleType = "none";
+    details.style.display = "flex";
+    details.style.flexDirection = "column";
 
-    ul.innerHTML = `
+    details.innerHTML = `
       <h4>${getFullName()}</h4>
-      <img  style="height: 150px; border-radius: 25px;" src="http://placebeard.it/g/640/480" alt="User Image" />
-      <li>Birthdate: <span>${birthdate}</span></li>
-      <li>Email: <span>${email}</span></li>
+      <img  style="height: 150px; width: 200px; border-radius: 25px;" src="http://placebeard.it/g/640/480" alt="User Image" />
+      <span>Birthdate: <span>${birthdate}</span></span>
+      <span>Age: <span>${age}</span></span>
+      <span>Email: <span>${email}</span></span>
     `;
 
-    document.body.appendChild(ul);
+    userList.appendChild(details);
   }
 });
