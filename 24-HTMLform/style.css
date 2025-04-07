@@ -16,10 +16,14 @@ body {
   text-shadow: 1px 2px 1px #333;
 }
 
-input::placeholder {
+input {
   color: #e0e0e0;
 }
 
+input::placeholder {
+  color: #bdbdbd;
+}
+
 input[type="date"] {
-  color: #e0e0e0;
+  color: #bdbdbd;
 }

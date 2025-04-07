@@ -38,8 +38,53 @@ form.innerHTML = `
   `
 document.body.appendChild(form);
 
-const divContainer = document.queryselector("form")
+const divContainer = document.querySelector("form")
   .querySelectorAll("div");
 divContainer.forEach (function(div) {
   div.className = "input-container";
+});
+
+form.addEventListener('submit', function(event) {
+  event.preventDefault();
+  document.body.style.display = "grid";
+  document.body.style.gridTemplateColumns = "1fr 1fr";
+
+  const firstName = document.getElementById('firstName').value;
+  const lastName = document.getElementById('lastName').value;
+  const birthdate = document.getElementById('birthdate').value;
+  const email = document.getElementById('email').value;
+
+  function validateUser() {
+    if (firstName === '' || lastName === '' || birthdate === '' || email === '' || password === '') {
+      alert('Please fill in all fields');
+      return;
+    } else {
+      createUser();
+      const inputs = document.querySelectorAll('input');
+      inputs.forEach(function(inputField) {
+        inputField.value = '';
+      });
+    }
+  }
+
+  function getFullName() {
+    return `${firstName} ${lastName}`;
+  }
+
+  validateUser();
+
+  function createUser() {
+    const ul = document.createElement('ul');
+    ul.id = "userDetails";
+    ul.style.listStyleType = "none";
+
+    ul.innerHTML = `
+      <h4>${getFullName()}</h4>
+      <img  style="height: 150px; border-radius: 25px;" src="http://placebeard.it/g/640/480" alt="User Image" />
+      <li>Birthdate: <span>${birthdate}</span></li>
+      <li>Email: <span>${email}</span></li>
+    `;
+
+    document.body.appendChild(ul);
+  }
 });
