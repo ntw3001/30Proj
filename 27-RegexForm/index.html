@@ -9,5 +9,36 @@
 </head>
 <body>
 
+  <div class="form-container">
+    <form action="#">
+      <div class="input-container">
+        <label for="FullName">Full Name</label>
+        <input type="text" id="FullName" name="FullName" placeholder="Enter your full name" required>
+        <!-- <span class="error-message" id="nameError"></span> -->
+      </div>
+      <div class="input-container">
+        <label for="Phone">Phone</label>
+        <input type="tel" id="Phone" name="Phone" placeholder="Enter your phone number" required>
+        <!-- <span class="error-message" id="phoneError"></span> -->
+      </div>
+      <div class="input-container">
+        <label for="ZIP Code">ZIP Code</label>
+        <input type="text" id="ZIP Code" name="ZIP Code" placeholder="Enter your ZIP code" required>
+        <!-- <span class="error-message" id="zipError"></span> -->
+      </div>
+      <div class="input-container">
+        <label for="Email">Email</label>
+        <input type="email" id="Email" name="Email" placeholder="Enter your email" required>
+        <!-- <span class="error-message" id="emailError"></span> -->
+      </div>
+      <div class="input-container">
+        <label for="Password">Password</label>
+        <input type="password" id="Password" name="Password" placeholder="Enter your password" required>
+        <!-- <span class="error-message" id="passwordError"></span> -->
+      </div>
+      <input type="submit" value="Submit" class="btn red" id="submitBtn">
+    </form>
+  </div>
+  <script src="main.js"></script>
 </body>
 </html>
