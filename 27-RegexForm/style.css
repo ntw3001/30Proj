@@ -26,6 +26,12 @@ label {
   color: #ddd;
 }
 
+.error-message {
+  color: red;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}
+
 input {
   color: var(--light-c);
 }
@@ -42,4 +48,19 @@ input.notValid {
 input.valid {
   color: green !important;
   border-bottom: 1px solid green !important;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0px 1000px var(--form-bg) inset !important;
+  box-shadow: 0 0 0px 1000px var(--form-bg) inset !important;
+  -webkit-text-fill-color: var(--light-c) !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+input:focus {
+  outline: none;
+  border-bottom: 1px solid #4caf50;
 }
