@@ -30,19 +30,22 @@ body::before {
 
 .navbar a {
   color: #ddd !important;
+  margin-left: 1rem;
 }
 
 .navbar-toggler {
   background-color: #ddd !important;
+  margin-right: 1rem;
 }
 
 h1 {
   text-align: center;
-  color: #fdfdfd;
+  color: #e0e0e0;
   font-size: 6rem;
   text-shadow: 1px 1px 2px #333;
   margin-top: 80px;
   margin-bottom: 40px;
+  z-index: 1;
 }
 
 .cards-container {
