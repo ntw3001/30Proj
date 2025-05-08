@@ -3,3 +3,36 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body, h1 {
+  font-family: "Raleway", Arial, sans-serif;
+}
+body {
+  height: 100vh;
+}
+
+input {
+  transform: scale(0.7);
+}
+
+.background-1 {
+  background-color: #9c27b0;
+}
+.background-2 {
+  background-color: #2196f3;
+}
+.background-3 {
+  background-color: #4caf50;
+}
+.background-4 {
+  background-color: #ffeb3b;
+}
+.background-5 {
+  background-color: #ff9800;
+}
+.background-6 {
+  background-color: #f44336;
+}
+.background-7 {
+  background-color: #e91e63;
+}
