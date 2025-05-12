@@ -13,9 +13,9 @@ taskForm.addEventListener('submit', function (e) {
     const taskItem = document.createElement('li');
     taskItem.textContent = `${taskIndex} - ${taskValue}`;
 
-    taskItem.addEventListener('click', function () {
+    taskItem.onclick = () => {
       taskItem.classList.toggle('completed');
-    });
+    };
 
     taskList.appendChild(taskItem);
     taskItem.classList.add ("task-item");
