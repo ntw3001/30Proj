@@ -1,9 +1,20 @@
 // Map Function
 
-const numbers = [1, 2, 3, 4, 5]
-const array = numbers.map((number) => {
-  return number*10
-});
+const select = document.querySelector("select")
+
+const paintings = [
+  {name: "Peach Balmo", width: 200, height: 400},
+  {name: "Foot", width: 300, height: 200},
+  {name: "Murder at the Parade", width: 600, height: 300},
+];
+
+const array = paintings.map((painting) => {
+  return `The painting known as ${painting.name} is sized at ${painting.width} x ${painting.height}`
+})
+
+select.insertAdjacentHTML("afterbegin", `<option>${array[0]}</option>,
+  <option>${array[1]}</option>, <option>${array[2]}</option>`
+);
 
 console.log(array);
 
