@@ -12,9 +12,20 @@ const channels = [
   {name: "ABC", premium: false},
 ];
 
-const result = channels.filter(channel => channel.premium)
+const user = {
+  name: "Framcos",
+  premium: true,
+  premiumChannels: function(){
+    return channels.filter(channels => channels.premium)
+  },
+  nonPremiumChannels: function(){
+    return channels.filter(channels => !channels.premium)
+  }
+}
 
-console.log(result)
+console.log
+console.log(user.premiumChannels());
+console.log(user.nonPremiumChannels());
 
 // Filter Functon 1
 
