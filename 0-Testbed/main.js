@@ -2,8 +2,21 @@ const container = document.querySelector(".container");
 const select = document.querySelector("select")
 
 
+// Filter Function 2
 
-// Filter Function 1
+const channels = [
+  {name: "HBO", premium: true},
+  {name: "ESPN", premium: true},
+  {name: "CNN", premium: false},
+  {name: "NBC", premium: false},
+  {name: "ABC", premium: false},
+];
+
+const result = channels.filter(channel => channel.premium)
+
+console.log(result)
+
+// Filter Functon 1
 
 // const pokemon = [
 //   {name: "Raichu", type: "Electric", evolution: "3rd"},
