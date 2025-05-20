@@ -2,30 +2,77 @@ const container = document.querySelector(".container");
 const select = document.querySelector("select")
 
 
-// Filter Function 2
+// Find Function 1
 
-const channels = [
-  {name: "HBO", premium: true},
-  {name: "ESPN", premium: true},
-  {name: "CNN", premium: false},
-  {name: "NBC", premium: false},
-  {name: "ABC", premium: false},
+const cars= [
+  {brand: "ford", type: "Sports Car", price: "200", available: 2},
+  {brand: "toyota", type: "SUV", price: "300", available: 5},
+  {brand: "honda", type: "Sedan", price: "400", available: 0},
+  {brand: "chevrolet", type: "Truck", price: "500", available: 1},
+  {brand: "nissan", type: "Hatchback", price: "600", available: 3},
+  {brand: "jeep", type: "SUV", price: "700", available: 4},
+  {brand: "subaru", type: "SUV", price: "800", available: 2},
+  {brand: "mercedes", type: "Luxury", price: "900", available: 1},
+  {brand: "audi", type: "Luxury", price: "1000", available: 0},
+  {brand: "bmw", type: "Luxury", price: "1100", available: 3},
+  {brand: "volkswagen", type: "Hatchback", price: "1200", available: 4},
+  {brand: "hyundai", type: "Sedan", price: "1300", available: 2},
+  {brand: "kia", type: "SUV", price: "1400", available: 1},
+  {brand: "fiat", type: "Hatchback", price: "1500", available: 0},
+  {brand: "porsche", type: "Sports Car", price: "1600", available: 3},
+  {brand: "tesla", type: "Electric", price: "1700", available: 4},
+  {brand: "volvo", type: "Luxury", price: "1800", available: 2},
+  {brand: "jaguar", type: "Luxury", price: "1900", available: 1},
+  {brand: "land rover", type: "Luxury", price: "2000", available: 0},
+  {brand: "ferrari", type: "Sports Car", price: "2100", available: 3},
+  {brand: "lamborghini", type: "Sports Car", price: "2200", available: 4},
 ];
 
-const user = {
-  name: "Framcos",
-  premium: true,
-  premiumChannels: function(){
-    return channels.filter(channels => channels.premium)
-  },
-  nonPremiumChannels: function(){
-    return channels.filter(channels => !channels.premium)
-  }
-}
+function getResults(price, type) {
+  return cars.find(function(car) {
+    return car.price <= price && car.type === type && car.available > 0;
+  })
+};
 
-console.log
-console.log(user.premiumChannels());
-console.log(user.nonPremiumChannels());
+document.querySelector(".search").addEventListener("click", function() {
+  console.log("clicked");
+  let price = parseInt(document.querySelector("#price").value);
+  let type = document.querySelector("#type").value;
+
+  let results = getResults(price, type);
+
+  if(results) {
+    container.innerHTML = `<h2>You can have a ${results.brand} ${results.type} for $${results.price}</h2>`;
+  }
+  else {
+    container.innerHTML = `<h2>No cars for you, go and have a bicycule</h2>`;
+  }
+});
+
+// Filter Function 2
+
+// const channels = [
+//   {name: "HBO", premium: true},
+//   {name: "ESPN", premium: true},
+//   {name: "CNN", premium: false},
+//   {name: "NBC", premium: false},
+//   {name: "ABC", premium: false},
+// ];
+
+// const user = {
+//   name: "Framcos",
+//   premium: true,
+//   premiumChannels: function(){
+//     return channels.filter(channels => channels.premium)
+//   },
+//   nonPremiumChannels: function(){
+//     return channels.filter(channels => !channels.premium)
+//   }
+// }
+
+// console.log
+// console.log(user.premiumChannels());
+// console.log(user.nonPremiumChannels());
 
 // Filter Functon 1
 
