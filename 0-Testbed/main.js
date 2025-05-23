@@ -1,20 +1,46 @@
 const container = document.querySelector(".container");
 const select = document.querySelector("select")
 
-// Reduce Helper 1
+// Reduce Helper 2
 
-const trips = [
-  {to: "Paris", distance: 2000},
-  {to: "London", distance: 3000},
-  {to: "New York", distance: 4000},
+const compluters = [
+  {type: "Laptop", os: "Winders", prince: 3},
+  {type: "Desktop", os: "Linux", prince: 4},
+  {type: "Desktop", os: "Winders", prince: 6},
+  {type: "Laptop", os: "Linux", prince: 7},
+  {type: "Laptop", os: "Winders", prince: 9},
+  {type: "Desktop", os: "Linux", prince: 10},
 ];
 
-const totalDistance = trips.reduce((total, trip) => {
-  total += trip.distance;
-  return total;
-},0);
+const sorted = compluters.reduce(([Winders, Linux], compluter) => {
+  if (compluter.os==="Winders") {
+    Winders.push(compluter);
+  }
+  else {
+    Linux.push(compluter);
+  }
+  return [Winders, Linux]
+}, [[], []])
 
-console.log(totalDistance);
+windersCount = sorted[0].length
+LinuxCount = sorted[1].length
+
+container.innerHTML = `<h2>There are ${windersCount} Winders computers and ${LinuxCount} Linux computers</h2>`;
+
+// Reduce Helper 1
+
+// const trips = [
+//   {to: "Paris", distance: 2000},
+//   {to: "London", distance: 3000},
+//   {to: "New York", distance: 4000},
+// ];
+
+// const totalDistance = trips.reduce((total, trip) => {
+//   total += trip.distance;
+//   return total;
+// },0);
+
+// console.log(totalDistance);
 
 // Reduce Helper
 
