@@ -1,22 +1,36 @@
 const container = document.querySelector(".container");
 const select = document.querySelector("select")
 
+// Reduce Helper 1
+
+const trips = [
+  {to: "Paris", distance: 2000},
+  {to: "London", distance: 3000},
+  {to: "New York", distance: 4000},
+];
+
+const totalDistance = trips.reduce((total, trip) => {
+  total += trip.distance;
+  return total;
+},0);
+
+console.log(totalDistance);
 
 // Reduce Helper
 
-const users = [
-{firstName: "Peach", lastName: "Balmo", age: 20},
-{firstName: "Dom", lastName: "Broder", age: 21},
-{firstName: "Jemmeifer", lastName: "Benglehauer", age: 22},
-{firstName: "Lorcus", lastName: "Brint", age: 23},
-]
+// const users = [
+// {firstName: "Peach", lastName: "Balmo", age: 20},
+// {firstName: "Dom", lastName: "Broder", age: 21},
+// {firstName: "Jemmeifer", lastName: "Benglehauer", age: 22},
+// {firstName: "Lorcus", lastName: "Brint", age: 23},
+// ]
 
-const name = users.reduce((start, user) => {
-  start.push(user.firstName)
-  return start
-},[])
+// const name = users.reduce((start, user) => {
+//   start.push(user.firstName)
+//   return start
+// },[])
 
-console.log(name);
+// console.log(name);
 
 // Find Function 1
 
