@@ -1,13 +1,28 @@
 const container = document.querySelector(".container");
 const select = document.querySelector("select")
 
-// Fat Arrow Function
+// Fat Arrow Function 2
 
-const value = function(name, age){
-  return `My name is ${name} and I'm here to say: I am ${age} years old, hey`;
+const names = ["James", "Tom", "Lisa", "Domy"];
+
+let randomName = (array) => {
+  console.log(array);
+  return array[Math.floor(Math.random() * array.length)];
 }
 
-console.log(value("Peach Balmo", 20));
+let randomNumber = (min, max) => {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+
+console.log(`My name is ${randomName(names)} and I\'m here to say, I\'m ${randomNumber(1, 100)} years old, hey`);
+
+// Fat Arrow Function 1
+
+// const value = function(name, age){
+//   return `My name is ${name} and I'm here to say: I am ${age} years old, hey`;
+// }
+
+// console.log(value("Peach Balmo", 20));
 
 // ForOf Helper
 
