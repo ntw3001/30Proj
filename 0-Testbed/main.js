@@ -1,31 +1,47 @@
 const container = document.querySelector(".container");
 const select = document.querySelector("select")
 
+// Fat Arrow Function
+
+const value = function(name, age){
+  return `My name is ${name} and I'm here to say: I am ${age} years old, hey`;
+}
+
+console.log(value("Peach Balmo", 20));
+
+// ForOf Helper
+
+// const names = ["Thumbs", "Dorg", "Lalth"]
+
+// for (let name of names) {
+//   console.log(name);
+// };
+
 // Reduce Helper 2
 
-const compluters = [
-  {type: "Laptop", os: "Winders", prince: 3},
-  {type: "Desktop", os: "Linux", prince: 4},
-  {type: "Desktop", os: "Winders", prince: 6},
-  {type: "Laptop", os: "Linux", prince: 7},
-  {type: "Laptop", os: "Winders", prince: 9},
-  {type: "Desktop", os: "Linux", prince: 10},
-];
+// const compluters = [
+//   {type: "Laptop", os: "Winders", prince: 3},
+//   {type: "Desktop", os: "Linux", prince: 4},
+//   {type: "Desktop", os: "Winders", prince: 6},
+//   {type: "Laptop", os: "Linux", prince: 7},
+//   {type: "Laptop", os: "Winders", prince: 9},
+//   {type: "Desktop", os: "Linux", prince: 10},
+// ];
 
-const sorted = compluters.reduce(([Winders, Linux], compluter) => {
-  if (compluter.os==="Winders") {
-    Winders.push(compluter);
-  }
-  else {
-    Linux.push(compluter);
-  }
-  return [Winders, Linux]
-}, [[], []])
+// const sorted = compluters.reduce(([Winders, Linux], compluter) => {
+//   if (compluter.os==="Winders") {
+//     Winders.push(compluter);
+//   }
+//   else {
+//     Linux.push(compluter);
+//   }
+//   return [Winders, Linux]
+// }, [[], []])
 
-windersCount = sorted[0].length
-LinuxCount = sorted[1].length
+// windersCount = sorted[0].length
+// LinuxCount = sorted[1].length
 
-container.innerHTML = `<h2>There are ${windersCount} Winders computers and ${LinuxCount} Linux computers</h2>`;
+// container.innerHTML = `<h2>There are ${windersCount} Winders computers and ${LinuxCount} Linux computers</h2>`;
 
 // Reduce Helper 1
 
