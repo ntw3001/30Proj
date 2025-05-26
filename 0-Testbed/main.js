@@ -1,18 +1,21 @@
 const container = document.querySelector(".container");
 const select = document.querySelector("select")
 
+// Default Arguments 1
+
+function greeting(name = "user"){
+  return `Hello ${name}, welcome`;
+}
+
+console.log(greeting())
+
 // Object Literals 2
 
-const createObject = ((name, lastName, age) =>{
-  let obj = {
-    name: name,
-    lastName: lastName,
-    age: age,
-  }
-  return obj;
-});
+// const createObject = ((name, lastName, age) => {
+//   return {name, lastName, age}
+// });
 
-console.log(createObject("Framcos","Benglehauer", 20));
+// console.log(createObject("Framcos","Benglehauer", 20));
 
 // Object Literals 1
 
