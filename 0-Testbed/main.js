@@ -1,20 +1,49 @@
 const container = document.querySelector(".container");
 const select = document.querySelector("select")
 
+// Object Literals 2
+
+const createObject = ((name, lastName, age) =>{
+  let obj = {
+    name: name,
+    lastName: lastName,
+    age: age,
+  }
+  return obj;
+});
+
+console.log(createObject("Framcos","Benglehauer", 20));
+
+// Object Literals 1
+
+// const createHero = (name, power) => {
+//   return {
+//     name: name,
+//     power: power,
+//     gatherAllies: () => {
+//       return `${this.name} is gathering allies with the power of ${this.power}`;
+//     }
+//   }
+// };
+
+// const character = createHero("Peach Balmo", "Charm");
+
+// console.log(character.gatherAllies());
+
 // Fat Arrow Function 2
 
-const names = ["James", "Tom", "Lisa", "Domy"];
+// const names = ["James", "Tom", "Lisa", "Domy"];
 
-let randomName = (array) => {
-  console.log(array);
-  return array[Math.floor(Math.random() * array.length)];
-}
+// let randomName = (array) => {
+//   console.log(array);
+//   return array[Math.floor(Math.random() * array.length)];
+// }
 
-let randomNumber = (min, max) => {
-  return Math.floor(Math.random() * (max - min)) + min;
-}
+// let randomNumber = (min, max) => {
+//   return Math.floor(Math.random() * (max - min)) + min;
+// }
 
-console.log(`My name is ${randomName(names)} and I\'m here to say, I\'m ${randomNumber(1, 100)} years old, hey`);
+// console.log(`My name is ${randomName(names)} and I\'m here to say, I\'m ${randomNumber(1, 100)} years old, hey`);
 
 // Fat Arrow Function 1
 
