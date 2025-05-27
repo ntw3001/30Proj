@@ -1,13 +1,26 @@
 const container = document.querySelector(".container");
 const select = document.querySelector("select")
 
+// Rest and Spread Operator 1
+
+const totalDistance = (...array) => {
+  const distances = array;
+  let total = 0;
+  distances.forEach((distance)=> {
+    total += distance;
+  });
+  return total;
+};
+
+console.log(totalDistance(1554, 4132, 5434, 432, 543, 1102))
+
 // Default Arguments 1
 
-function greeting(name = "user"){
-  return `Hello ${name}, welcome`;
-}
+// function greeting(name = "user"){
+//   return `Hello ${name}, welcome`;
+// }
 
-console.log(greeting())
+// console.log(greeting())
 
 // Object Literals 2
 
