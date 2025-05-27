@@ -1,18 +1,28 @@
 const container = document.querySelector(".container");
 const select = document.querySelector("select")
 
+// Rest and Spread Operator 2
+
+function showItems(arg1, ...args){
+  let arr = [...args, ...arg1];
+  console.log(arr);
+}
+
+showItems(["dogs", "cats"], "turtles", "fish");
+
+
 // Rest and Spread Operator 1
 
-const totalDistance = (...array) => {
-  const distances = array;
-  let total = 0;
-  distances.forEach((distance)=> {
-    total += distance;
-  });
-  return total;
-};
+// const totalDistance = (...array) => {
+//   const distances = array;
+//   let total = 0;
+//   distances.forEach((distance)=> {
+//     total += distance;
+//   });
+//   return total;
+// };
 
-console.log(totalDistance(1554, 4132, 5434, 432, 543, 1102))
+// console.log(totalDistance(1554, 4132, 5434, 432, 543, 1102))
 
 // Default Arguments 1
 
