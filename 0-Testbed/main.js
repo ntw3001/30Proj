@@ -1,14 +1,87 @@
 const container = document.querySelector(".container");
 const select = document.querySelector("select")
 
+// Destructuring
+
+// const user = {
+//   name: "Framcos",
+//   lastName: "Benglehauer",
+//   age: 20,
+// };
+
+// // let name = user.name;
+// // let lastName = user.lastName;
+// // let age = user.age;
+
+// const {name, lastName, age} = user;
+// container.innerHTML = `<h2>My name is ${name} ${lastName} and I am ${age} years old</h2>`;
+
+// Classes. 0.1
+
+// class Pokemon {
+//   constructor (name, type)
+//     {
+//     this.name = name;
+//     this.type = type;
+//     this.cry = `${this.name} ${this.name}!`;
+//     }
+
+//   move() {
+//     if (this.type === "Electric") {
+//         return "thundershock";
+//     } else if (this.type === "Fire") {
+//       return "ember";
+//     } else if (this.type === "Water") {
+//       return "water gun";
+//     } else {
+//       return "tackle";
+//     }
+//   }
+//   attack() {
+//     container.innerText = `${this.cry}, ${this.name} cried, striking its foe down with a brutal ${this.move()}`;
+//   };
+// }
+
+// const chooseYou = new Pokemon("Gus", "Water")
+
+// chooseYou.attack();
+
+// Classes 0
+
+// function Pokemon(name, type)
+// {
+//   this.name = name;
+//   this.type = type;
+//   this.cry = `${this.name} ${this.name}!`;
+//   this.move = function() {
+//     if (this.type === "Electric") {
+  //     return "thundershock";
+  //   } else if (this.type === "Fire") {
+  //     return "ember";
+  //   } else if (this.type === "Water") {
+  //     return "water gun";
+  //   } else {
+  //     return "tackle";
+  //   }
+  // }
+// }
+
+// Pokemon.prototype.attack = function() {
+//   container.innerText = `${this.cry}, ${this.name} cried, striking its foe down with a brutal ${this.move()}`;
+// }
+
+// const chooseYou = new Pokemon("Gus", "Water")
+
+// chooseYou.attack();
+
 // Rest and Spread Operator 2
 
-function showItems(arg1, ...args){
-  let arr = [...args, ...arg1];
-  console.log(arr);
-}
+// function showItems(arg1, ...args){
+//   let arr = [...args, ...arg1];
+//   console.log(arr);
+// }
 
-showItems(["dogs", "cats"], "turtles", "fish");
+// showItems(["dogs", "cats"], "turtles", "fish");
 
 
 // Rest and Spread Operator 1
