@@ -1,7 +1,35 @@
 const container = document.querySelector(".container");
 const select = document.querySelector("select")
 
-// Destructuring
+// Destructuring 3
+
+
+
+// Destructuring 2
+
+// const cars = [
+//   "Ford",
+//   "Toyota",
+//   "Honda",
+//   "Chevrolet",
+//   "Nissan",
+//   "Hyundai",
+//   "Kia",
+//   "Volkswagen",
+//   "Subaru",
+//   "Mazda",
+//   "Dodge",
+//   "Jeep",
+//   "Chrysler",
+//   "Ram"
+// ];
+
+// const [Ford, Toyota, Honda, Chevrolet, Nissan, Hyundai, Kia, Volkswagen, Subaru, Mazda, Dodge, Jeep, Chrysler, Ram] = cars;
+
+// console.log(Ford)
+
+
+// Destructuring 1
 
 // const user = {
 //   name: "Framcos",
