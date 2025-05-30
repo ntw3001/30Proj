@@ -1,26 +1,28 @@
 const container = document.querySelector(".container");
 const select = document.querySelector("select")
 
+
+
 // Destructuring 4
 
-// function createCar({brand, model, year, colour, transmission}) {
-//   return {
-//     brand,
-//     model,
-//     year,
-//     colour,
-//     transmission,
-//     description: `${year} ${colour} ${brand} ${model} (${transmission})`,
-//   }
-// }
+function createCar({brand, model, year, colour, transmission}) {
+  return {
+    brand,
+    model,
+    year,
+    colour,
+    transmission,
+    description: `${year} ${colour} ${brand} ${model} (${transmission})`,
+  }
+}
 
-// const car = {
-//   brand: "Ford",
-//   model: "Fiesta",
-//   year: "2023",
-//   colour: "red",
-//   transmission: "manual"
-// }
+const car = {
+  brand: "Ford",
+  model: "Fiesta",
+  year: "2023",
+  colour: "red",
+  transmission: "manual"
+}
 
 // let myChild = createCar(car);
 
