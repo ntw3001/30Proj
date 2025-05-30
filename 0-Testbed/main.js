@@ -1,7 +1,18 @@
 const container = document.querySelector(".container");
 const select = document.querySelector("select")
 
+// Promises 1
 
+let promise = new Promise((resolved, rejected) => {
+  setTimeout(() => {
+    rejected();
+  }, 5000)
+});
+
+promise
+.then(() => console.log("Promise resolved successfully"))
+.then(() => console.log("It's true I saw it"))
+.catch((error) => console.log("Promise rejected with error: " + error))
 
 // Destructuring 4
 
