@@ -1,23 +1,31 @@
 const container = document.querySelector(".container");
 const select = document.querySelector("select")
 
+// Modules
+
+import {sum, anotherSum} from "./module1.js";
+import {randomer, array} from "./module2.js";
+
+console.log(sum, anotherSum);
+console.log(randomer(), array[4]);
+
 // Numbers and Strings 1
 
-console.log("first like this: console.log('Hello, World!'.repeat(4))");
-console.log("Hello, World!".repeat(4));
-console.log("")
-console.log("and then like this: console.log(Array(4).fill('Hello, World!').join(' '))")
-console.log(Array(4).fill("Hello, World!").join(" "))
+// console.log("first like this: console.log('Hello, World!'.repeat(4))");
+// console.log("Hello, World!".repeat(4));
+// console.log("")
+// console.log("and then like this: console.log(Array(4).fill('Hello, World!').join(' '))")
+// console.log(Array(4).fill("Hello, World!").join(" "))
 
-const words = ["Burgers", "Hamburgers", "Hamburg", "Burgher", "Hamburglar", "Burghermeister"];
+// const words = ["Burgers", "Hamburgers", "Hamburg", "Burgher", "Hamburglar", "Burghermeister"];
 
-console.log(words)
-console.log(`index of Hamburg: ${(words.indexOf("Hamburg"))}`)
-console.log(`Index 1 starts with Burg: ${(words[1].startsWith("Burg"))}`)
-console.log(`Index 1 starts with amb, beginning from character 2: ${(words[1].startsWith("amb", 1))}`)
-console.log(`Index 4 ends with lar: ${(words[2].endsWith("lar"))}`)
-console.log(`Array includes Burgher: ${(words.includes("Burgher"))}`)
-console.log(`Index 5 includes gher: ${(words[3].includes("gher"))}`)
+// console.log(words)
+// console.log(`index of Hamburg: ${(words.indexOf("Hamburg"))}`)
+// console.log(`Index 1 starts with Burg: ${(words[1].startsWith("Burg"))}`)
+// console.log(`Index 1 starts with amb, beginning from character 2: ${(words[1].startsWith("amb", 1))}`)
+// console.log(`Index 4 ends with lar: ${(words[2].endsWith("lar"))}`)
+// console.log(`Array includes Burgher: ${(words.includes("Burgher"))}`)
+// console.log(`Index 5 includes gher: ${(words[3].includes("gher"))}`)
 
 // Promises 1
 
