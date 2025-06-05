@@ -4,10 +4,10 @@ const select = document.querySelector("select")
 // Modules
 
 import {aweSum, anotherSum} from "./module1.js";
-import {randomer, array} from "./module2.js";
+import * as theRest from "./module2.js";
 
 console.log(aweSum, anotherSum);
-console.log(randomer(), array[4]);
+console.log(theRest.randomer(), theRest.array[4]);
 
 // Numbers and Strings 1
 
