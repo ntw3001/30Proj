@@ -5,9 +5,11 @@ const select = document.querySelector("select")
 
 import {aweSum, anotherSum} from "./module1.js";
 import * as theRest from "./module2.js";
+import module3Function from "./module3.js";
 
 console.log(aweSum, anotherSum);
 console.log(theRest.randomer(), theRest.array[4]);
+module3Function();
 
 // Numbers and Strings 1
 
