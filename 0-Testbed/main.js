@@ -1,15 +1,39 @@
 const container = document.querySelector(".container");
 const select = document.querySelector("select")
+const button = document.getElementById("startButton");
+const content = document.querySelector(".content");
+
+// Generators
+
+function *generator() {
+  yield "Peach Balmo";
+  yield "Dom Broder";
+  yield "Jemmeifer Benglehauer";
+  yield "Lorcus Brint";
+  return "Mishan Compree";
+}
+
+const gen = generator();
+
+// console.log(gen.next().value); // Peach Balmo
+// console.log(gen.next()); // Dom Broder
+// console.log(gen.next().value); // Jemmeifer Benglehauer
+// console.log(gen.next()); // Lorcus Brint
+
+button.addEventListener("click", () => {
+  console.log("Button clicked");
+  content.innerHTML = `<h2>${gen.next().value}</h2>`;
+});
 
 // Modules
 
-import {aweSum, anotherSum} from "./module1.js";
-import * as theRest from "./module2.js";
-import exampleApi from "./module3.js";
+// import {aweSum, anotherSum} from "./module1.js";
+// import * as theRest from "./module2.js";
+// import exampleApi from "./module3.js";
 
-console.log(aweSum, anotherSum);
-console.log(theRest.randomer(), theRest.array[4]);
-exampleApi.showName();
+// console.log(aweSum, anotherSum);
+// console.log(theRest.randomer(), theRest.array[4]);
+// exampleApi.showName();
 
 // Numbers and Strings 1
 
