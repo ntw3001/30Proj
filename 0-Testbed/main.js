@@ -3,27 +3,50 @@ const select = document.querySelector("select")
 const button = document.getElementById("startButton");
 const content = document.querySelector(".content");
 
-// Generators
+// Generators 2
 
-function *generator() {
-  yield "Peach Balmo";
-  yield "Dom Broder";
-  yield "Jemmeifer Benglehauer";
-  yield "Lorcus Brint";
-  return "Mishan Compree";
+function getOrder() {
+  return "Pizza please"
 }
 
-const gen = generator();
+function* logGen() {
+  alert("Generator started");
+  yield "Step 1: Initializing the generator";
+  alert(`Generator still going, order: ${getOrder()}`);
+  yield "Step 2: Order received";
+  alert(`Thanks for ordering a ${getOrder()}, hope you liked it :)`);
+  yield "Step 3: Order completed";
+  return "Generator finished";
+}
 
-// console.log(gen.next().value); // Peach Balmo
-// console.log(gen.next()); // Dom Broder
-// console.log(gen.next().value); // Jemmeifer Benglehauer
-// console.log(gen.next()); // Lorcus Brint
+let gen = logGen();
 
 button.addEventListener("click", () => {
   console.log("Button clicked");
   content.innerHTML = `<h2>${gen.next().value}</h2>`;
 });
+
+// Generators 1
+
+// function *generator() {
+//   yield "Peach Balmo";
+//   yield "Dom Broder";
+//   yield "Jemmeifer Benglehauer";
+//   yield "Lorcus Brint";
+//   return "Mishan Compree";
+// }
+
+// const gen = generator();
+
+// // console.log(gen.next().value); // Peach Balmo
+// // console.log(gen.next()); // Dom Broder
+// // console.log(gen.next().value); // Jemmeifer Benglehauer
+// // console.log(gen.next()); // Lorcus Brint
+
+// button.addEventListener("click", () => {
+//   console.log("Button clicked");
+//   content.innerHTML = `<h2>${gen.next().value}</h2>`;
+// });
 
 // Modules
 
