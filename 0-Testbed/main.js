@@ -3,28 +3,54 @@ const select = document.querySelector("select")
 const button = document.getElementById("startButton");
 const content = document.querySelector(".content");
 
+// Generators 3
+
+function *brands() {
+  yield 'Ford';
+  yield 'Nissan';
+  yield 'Toyota';
+  yield 'Honda';
+}
+
+const gen = brands();
+
+console.log(gen.next()); // yields ford and done: false
+console.log(gen.next());
+console.log(gen.next());
+console.log(gen.next());
+console.log(gen.next()); // yields undefined and done: true
+
+let array = [];
+for (var i of brands()) {
+  console.log(i)
+  array.push(i) // mutates the array - faster, but can cause issues with states
+  // array = [...array, i]; // recreaes the array - slower, but safer
+}
+
+content.innerHTML = `<p>${array.join(", ")} are all car brands</p>`
+
 // Generators 2
 
-function getOrder() {
-  return "Pizza please"
-}
+// function getOrder() {
+//   return "Pizza please"
+// }
 
-function* logGen() {
-  alert("Generator started");
-  yield "Step 1: Initializing the generator";
-  alert(`Generator still going, order: ${getOrder()}`);
-  yield "Step 2: Order received";
-  alert(`Thanks for ordering a ${getOrder()}, hope you liked it :)`);
-  yield "Step 3: Order completed";
-  return "Generator finished";
-}
+// function* logGen() {
+//   alert("Generator started");
+//   yield "Step 1: Initializing the generator";
+//   alert(`Generator still going, order: ${getOrder()}`);
+//   yield "Step 2: Order received";
+//   alert(`Thanks for ordering a ${getOrder()}, hope you liked it :)`);
+//   yield "Step 3: Order completed";
+//   return "Generator finished";
+// }
 
-let gen = logGen();
+// let gen = logGen();
 
-button.addEventListener("click", () => {
-  console.log("Button clicked");
-  content.innerHTML = `<h2>${gen.next().value}</h2>`;
-});
+// button.addEventListener("click", () => {
+//   console.log("Button clicked");
+//   content.innerHTML = `<h2>${gen.next().value}</h2>`;
+// });
 
 // Generators 1
 
