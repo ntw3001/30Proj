@@ -3,31 +3,59 @@ const select = document.querySelector("select")
 const button = document.getElementById("startButton");
 const content = document.querySelector(".content");
 
+// Generators 4
+
+const car = {
+  id: 1,
+  brand: "Ford",
+  model: "Fiesta",
+  year: 2023,
+  colour: "red",
+  transmission: "manual"
+}
+
+function* carGenerator(carObj) {
+  yield carObj.id;
+  yield carObj.brand;
+  yield carObj.model;
+  yield carObj.year;
+  yield carObj.colour;
+  yield carObj.transmission;
+}
+
+let newCar = [];
+
+for(let i of carGenerator(car)) {
+  newCar = [...newCar, i]
+}
+
+console.log(newCar);
+
 // Generators 3
 
-function *brands() {
-  yield 'Ford';
-  yield 'Nissan';
-  yield 'Toyota';
-  yield 'Honda';
-}
+// function *brands() {
+//   yield 'Ford';
+//   yield 'Nissan';
+//   yield 'Toyota';
+//   yield 'Honda';
+// }
 
-const gen = brands();
+// const gen = brands();
 
-console.log(gen.next()); // yields ford and done: false
-console.log(gen.next());
-console.log(gen.next());
-console.log(gen.next());
-console.log(gen.next()); // yields undefined and done: true
+// console.log(gen.next()); // yields ford and done: false
+// console.log(gen.next());
+// console.log(gen.next());
+// console.log(gen.next());
+// console.log(gen.next()); // yields undefined and done: true
 
-let array = [];
-for (var i of brands()) {
-  console.log(i)
-  array.push(i) // mutates the array - faster, but can cause issues with states
-  // array = [...array, i]; // recreaes the array - slower, but safer
-}
+// let array = [];
+// for (var i of brands()) {
+//   console.log(i)
+//   array.push(i) // mutates the array - faster, but can cause issues with states
+//   // array = [...array, i]; // recreaes the array - slower, but safer
+// }
 
-content.innerHTML = `<p>${array.join(", ")} are all car brands</p>`
+// content.innerHTML = `<p>${array.join(", ")} are all car brands</p>`
 
 // Generators 2
 
