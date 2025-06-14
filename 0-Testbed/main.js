@@ -3,7 +3,13 @@ const select = document.querySelector("select")
 const button = document.getElementById("startButton");
 const content = document.querySelector(".content");
 
-// Generators 4
+// Generators 4 & 5
+
+const shops = {
+  shop1: "Supermarket",
+  shop2: "Car Shop",
+  shop3: "Clothes Shop",
+}
 
 const car = {
   id: 1,
@@ -11,7 +17,8 @@ const car = {
   model: "Fiesta",
   year: 2023,
   colour: "red",
-  transmission: "manual"
+  transmission: "manual",
+  shop: shops
 }
 
 function* carGenerator(carObj) {
@@ -21,6 +28,13 @@ function* carGenerator(carObj) {
   yield carObj.year;
   yield carObj.colour;
   yield carObj.transmission;
+  yield* shopsGenerator(carObj.shop);
+}
+
+function* shopsGenerator(shopsObj) {
+  yield shopsObj.shop1;
+  yield shopsObj.shop2;
+  yield shopsObj.shop3;
 }
 
 let newCar = [];
