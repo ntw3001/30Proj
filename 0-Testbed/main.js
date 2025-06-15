@@ -3,61 +3,77 @@ const select = document.querySelector("select")
 const button = document.getElementById("startButton");
 const content = document.querySelector(".content");
 
-// Generators 4 & 5
+// Sets
 
-const shops = {
-  shop1: "Supermarket",
-  shop2: "Car Shop",
-  shop3: "Clothes Shop",
-  [Symbol.iterator]: function* () { // We're defining a generator function for the shops object
-    yield this.shop1;
-    yield this.shop2;
-    yield this.shop3;
-  }
-}
+let mySet = new Set(["dogs", "dogs", "cats", "cats", "cats", "turtles", "fish"]);
 
-const car = {
-  id: 1,
-  brand: "Ford",
-  model: "Fiesta",
-  year: 2023,
-  colour: "red",
-  transmission: "manual",
-  shop: shops,
-  [Symbol.iterator]: function* () { // We're defining a generator function for the car object
-    yield this.id;
-    yield this.brand;
-    yield this.model;
-    yield this.year;
-    yield this.colour;
-    yield this.transmission;
-    yield* this.shop; // This will yield the shops using the iterator defined within the shops object
-  }
-}
+console.log(mySet); // because it's a set instead of just an array, it won't show duplicates
+mySet.add("birds"); // adding a new item to the set
+mySet.add("cats").add("frogs"); // it won't add the duplicate "cats" again, but it will add "frogs"
+console.log(mySet);
+console.log(`Haw meny? ${mySet.size}`); // 4, because it doesn't count duplicates
+console.log(`Dogs? ${mySet.has("dogs")}`); // true, because "dogs" is in the set
+console.log(`Sausaghes? ${mySet.has("sausages")}`); // false, because "sausages" is not in the set
+mySet.delete("cats"); // removing "cats" from the set
+console.log(mySet); // now it won't show "cats" anymore
+mySet.clear(); // clearing the set
+console.log(mySet); // now it will show an empty set
 
-function* carGenerator(carObj) {
-  yield carObj.id;
-  yield carObj.brand;
-  yield carObj.model;
-  yield carObj.year;
-  yield carObj.colour;
-  yield carObj.transmission;
-  yield* carObj.shop; // This will yield the shops using the iterator defined within the shops object
-}
+// Generators 4, 5 & 6
 
-// Alternative way to define the generator function for shops - we don't need it if we have the same function defined within the shops object
-// function* shopsGenerator(shopsObj) {
-//   yield shopsObj.shop1;
-//   yield shopsObj.shop2;
-//   yield shopsObj.shop3;
+// const shops = {
+//   shop1: "Supermarket",
+//   shop2: "Car Shop",
+//   shop3: "Clothes Shop",
+//   [Symbol.iterator]: function* () { // We're defining a generator function for the shops object
+//     yield this.shop1;
+//     yield this.shop2;
+//     yield this.shop3;
+//   }
 // }
 
-let newCar = [];
-for(let i of carGenerator(car)) {
-  newCar = [...newCar, i]
-}
+// const car = {
+//   id: 1,
+//   brand: "Ford",
+//   model: "Fiesta",
+//   year: 2023,
+//   colour: "red",
+//   transmission: "manual",
+//   shop: shops,
+//   [Symbol.iterator]: function* () { // We're defining a generator function for the car object
+//     yield this.id;
+//     yield this.brand;
+//     yield this.model;
+//     yield this.year;
+//     yield this.colour;
+//     yield this.transmission;
+//     yield* this.shop; // This will yield the shops using the iterator defined within the shops object
+//   }
+// }
 
-console.log(newCar);
+// function* carGenerator(carObj) {
+//   yield carObj.id;
+//   yield carObj.brand;
+//   yield carObj.model;
+//   yield carObj.year;
+//   yield carObj.colour;
+//   yield carObj.transmission;
+//   yield* carObj.shop; // This will yield the shops using the iterator defined within the shops object
+// }
+
+// // Alternative way to define the generator function for shops - we don't need it if we have the same function defined within the shops object
+// // function* shopsGenerator(shopsObj) {
+// //   yield shopsObj.shop1;
+// //   yield shopsObj.shop2;
+// //   yield shopsObj.shop3;
+// // }
+
+// let newCar = [];
+// for(let i of carGenerator(car)) {
+//   newCar = [...newCar, i]
+// }
+
+// console.log(newCar);
 
 // Generators 3
 
