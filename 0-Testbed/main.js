@@ -9,6 +9,11 @@ const shops = {
   shop1: "Supermarket",
   shop2: "Car Shop",
   shop3: "Clothes Shop",
+  [Symbol.iterator]: function* () { // We're defining a generator function for the shops object
+    yield this.shop1;
+    yield this.shop2;
+    yield this.shop3;
+  }
 }
 
 const car = {
@@ -18,7 +23,16 @@ const car = {
   year: 2023,
   colour: "red",
   transmission: "manual",
-  shop: shops
+  shop: shops,
+  [Symbol.iterator]: function* () { // We're defining a generator function for the car object
+    yield this.id;
+    yield this.brand;
+    yield this.model;
+    yield this.year;
+    yield this.colour;
+    yield this.transmission;
+    yield* this.shop; // This will yield the shops using the iterator defined within the shops object
+  }
 }
 
 function* carGenerator(carObj) {
@@ -28,17 +42,17 @@ function* carGenerator(carObj) {
   yield carObj.year;
   yield carObj.colour;
   yield carObj.transmission;
-  yield* shopsGenerator(carObj.shop);
+  yield* carObj.shop; // This will yield the shops using the iterator defined within the shops object
 }
 
-function* shopsGenerator(shopsObj) {
-  yield shopsObj.shop1;
-  yield shopsObj.shop2;
-  yield shopsObj.shop3;
-}
+// Alternative way to define the generator function for shops - we don't need it if we have the same function defined within the shops object
+// function* shopsGenerator(shopsObj) {
+//   yield shopsObj.shop1;
+//   yield shopsObj.shop2;
+//   yield shopsObj.shop3;
+// }
 
 let newCar = [];
-
 for(let i of carGenerator(car)) {
   newCar = [...newCar, i]
 }
