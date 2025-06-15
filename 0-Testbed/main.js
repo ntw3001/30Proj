@@ -3,7 +3,7 @@ const select = document.querySelector("select")
 const button = document.getElementById("startButton");
 const content = document.querySelector(".content");
 
-// Sets
+// Sets 1 & 2
 
 let mySet = new Set(["dogs", "dogs", "cats", "cats", "cats", "turtles", "fish"]);
 
@@ -16,6 +16,22 @@ console.log(`Dogs? ${mySet.has("dogs")}`); // true, because "dogs" is in the set
 console.log(`Sausaghes? ${mySet.has("sausages")}`); // false, because "sausages" is not in the set
 mySet.delete("cats"); // removing "cats" from the set
 console.log(mySet); // now it won't show "cats" anymore
+
+for (let item of mySet) {
+  console.log(item); // this will log each item in the set
+}
+
+[...mySet].forEach((item, index) => {
+  console.log(`${index}: #${item}`); // this will also log each item in the set
+})
+
+let filtered = [...mySet].filter((item)=>{
+  return item.startsWith("f") // this will filter the set for items that start with "f"
+})
+
+console.log(`filtered by F: ${filtered}`); // it will show an array with the filtered items
+
+
 mySet.clear(); // clearing the set
 console.log(mySet); // now it will show an empty set
 
