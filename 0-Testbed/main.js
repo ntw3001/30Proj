@@ -29,6 +29,12 @@ skaven.get("Trigger")(); // This will call the function associated with the key 
 
 console.log(skaven); // This will log the entire Map object
 console.log(skaven.size); // This will log the number of key-value pairs in the Map
+console.log(skaven.has("leader")); // This will check if the key "leader" exists in the Map and log true
+console.log(skaven.delete("slave")); // This will delete the key "slave" from the Map and log true
+console.log(`Slave have? ${skaven.has("slave")}`); // This will check if the key "slave" exists in the Map and log false
+console.log(skaven.get("leader").equipment) // This will log the equipment of the leader
+console.log(skaven.clear()); // This will clear the entire Map and log undefined
+console.log(skaven); // This will log an empty Map
 
 // Sets 1 & 2
 
