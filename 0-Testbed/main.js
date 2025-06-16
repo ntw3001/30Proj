@@ -23,9 +23,9 @@ skaven.set("warrior", {
 console.log(skaven.get("leader")); // This will log the object associated with the key "leader"
 
 skaven.set("slave", "nobody"); // This will add a new key-value pair to the Map
-skaven.set("Trigger", () => (console.log("Krekkstorm activated!"))); // This will add a new key-value pair with a function as the value
+skaven.set("trigger", () => (console.log("Krekkstorm activated!"))); // This will add a new key-value pair with a function as the value
 
-skaven.get("Trigger")(); // This will call the function associated with the key "Trigger"
+skaven.get("trigger")(); // This will call the function associated with the key "Trigger"
 
 console.log(skaven); // This will log the entire Map object
 console.log(skaven.size); // This will log the number of key-value pairs in the Map
@@ -33,6 +33,27 @@ console.log(skaven.has("leader")); // This will check if the key "leader" exists
 console.log(skaven.delete("slave")); // This will delete the key "slave" from the Map and log true
 console.log(`Slave have? ${skaven.has("slave")}`); // This will check if the key "slave" exists in the Map and log false
 console.log(skaven.get("leader").equipment) // This will log the equipment of the leader
+console.log(skaven.delete("trigger"))
+
+for(let [key, value] of skaven) {
+  console.log(key[0]) // This will log the first letter of each key in the Map
+  console.log(key) // This will log each key in the Map
+  console.log(value) // This will log each value in the Map
+}
+
+console.log(Array.from(skaven.keys())); // This will log an array of all keys in the Map
+console.log(Array.from(skaven.values())); // This will log an array of all values in the Map
+console.log(
+  Array.from(skaven.get("leader").equipment.toLowerCase().replace(/\s+/g, ""))
+) // This will log an array of characters in the leader's equipment string, downcased and with spaces removed
+
+let catchphrases = Array.from(skaven.values()).map(item => {
+  return (item.catchphrase); // This will create an array of names from the values in the Map
+});
+
+console.log(catchphrases);
+
+
 console.log(skaven.clear()); // This will clear the entire Map and log undefined
 console.log(skaven); // This will log an empty Map
 
