@@ -3,37 +3,64 @@ const select = document.querySelector("select")
 const button = document.getElementById("startButton");
 const content = document.querySelector(".content");
 
+//Map
+
+const skaven = new Map();
+
+skaven.set("leader", {
+  name: "Krekk Skullbiter",
+  equipment: "Warpstone Blade",
+  catchphrase: "The Krekkstorm is coming-approaching!",
+});
+
+skaven.set("warrior", {
+  name: "Skrak Scamperfoot",
+  equipment: "Halberd",
+  catchphrase: "For the Skullbiter!",
+});
+
+
+console.log(skaven.get("leader")); // This will log the object associated with the key "leader"
+
+skaven.set("slave", "nobody"); // This will add a new key-value pair to the Map
+skaven.set("Trigger", () => (console.log("Krekkstorm activated!"))); // This will add a new key-value pair with a function as the value
+
+skaven.get("Trigger")(); // This will call the function associated with the key "Trigger"
+
+console.log(skaven); // This will log the entire Map object
+console.log(skaven.size); // This will log the number of key-value pairs in the Map
+
 // Sets 1 & 2
 
-let mySet = new Set(["dogs", "dogs", "cats", "cats", "cats", "turtles", "fish"]);
+// let mySet = new Set(["dogs", "dogs", "cats", "cats", "cats", "turtles", "fish"]);
 
-console.log(mySet); // because it's a set instead of just an array, it won't show duplicates
-mySet.add("birds"); // adding a new item to the set
-mySet.add("cats").add("frogs"); // it won't add the duplicate "cats" again, but it will add "frogs"
-console.log(mySet);
-console.log(`Haw meny? ${mySet.size}`); // 4, because it doesn't count duplicates
-console.log(`Dogs? ${mySet.has("dogs")}`); // true, because "dogs" is in the set
-console.log(`Sausaghes? ${mySet.has("sausages")}`); // false, because "sausages" is not in the set
-mySet.delete("cats"); // removing "cats" from the set
-console.log(mySet); // now it won't show "cats" anymore
+// console.log(mySet); // because it's a set instead of just an array, it won't show duplicates
+// mySet.add("birds"); // adding a new item to the set
+// mySet.add("cats").add("frogs"); // it won't add the duplicate "cats" again, but it will add "frogs"
+// console.log(mySet);
+// console.log(`Haw meny? ${mySet.size}`); // 4, because it doesn't count duplicates
+// console.log(`Dogs? ${mySet.has("dogs")}`); // true, because "dogs" is in the set
+// console.log(`Sausaghes? ${mySet.has("sausages")}`); // false, because "sausages" is not in the set
+// mySet.delete("cats"); // removing "cats" from the set
+// console.log(mySet); // now it won't show "cats" anymore
 
-for (let item of mySet) {
-  console.log(item); // this will log each item in the set
-}
+// for (let item of mySet) {
+//   console.log(item); // this will log each item in the set
+// }
 
-[...mySet].forEach((item, index) => {
-  console.log(`${index}: #${item}`); // this will also log each item in the set
-})
+// [...mySet].forEach((item, index) => {
+//   console.log(`${index}: #${item}`); // this will also log each item in the set
+// })
 
-let filtered = [...mySet].filter((item)=>{
-  return item.startsWith("f") // this will filter the set for items that start with "f"
-})
+// let filtered = [...mySet].filter((item)=>{
+//   return item.startsWith("f") // this will filter the set for items that start with "f"
+// })
 
-console.log(`filtered by F: ${filtered}`); // it will show an array with the filtered items
+// console.log(`filtered by F: ${filtered}`); // it will show an array with the filtered items
 
 
-mySet.clear(); // clearing the set
-console.log(mySet); // now it will show an empty set
+// mySet.clear(); // clearing the set
+// console.log(mySet); // now it will show an empty set
 
 // Generators 4, 5 & 6
 
